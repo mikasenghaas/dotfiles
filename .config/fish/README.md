@@ -4,7 +4,7 @@
 
 Alacritty uses fish by default, so firing up the terminal should also open fish. To verify, type
 
-```
+```shell
 echo $SHELL
 ```
 
@@ -13,7 +13,11 @@ This prints out your default shell.
 ## :electric_plug: Plugins
 
 My fish configuration makes use of some plugins. The plugin manager is called [`fisher`](https://github.com/jorgebucaran/fisher). 
-It is uses to install, update and remove plugins interactively.
+It is uses to install, update and remove plugins interactively. Install via:
+
+```shell
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+```
 
 Install plugins using `fisher install <github-path>`. This install the plugin into 
 List all currently installed plugins using `fisher list`
@@ -25,3 +29,11 @@ This is the list of all the plugins that I am using (inspired by this [plugin cu
 3. [fzf](https://github.com/PatrickF1/fzf.fish) for fuzzy finding
 4. [fish-exa](https://github.com/gazorby/fish-exa) for exa keybindings in fish
 
+To install all plugins run:
+
+```
+fisher install jorgebucaran/hydro
+fisher install jethrokuan/z
+fisher install PatrickF1/fzf.fish
+fisher install gazorby/fish-exa
+```
