@@ -16,7 +16,7 @@
   a = add
   d = diff
   co = checkout
-  ci = commit
+  c = commit
   ca = commit -a
   ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
   pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
