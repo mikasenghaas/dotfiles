@@ -8,13 +8,13 @@ Feel free to take inspiration.
 The full list fo applications and software I use every day.
 
 - [**alacritty**](https://github.com/jonas-mika/dotfiles/tree/main/.config/alacritty) as primary terminal
-- [**zsh**]() as primary shell
-- [**nvim**]() as primary editor 
+- [**fish**](https://github.com/jonas-mika/dotfiles/tree/main/.config/fish) as primary shell
+- [**nvim**](https://github.com/jonas-mika/dotfiles/tree/main/.config/nvim) as primary editor 
 - [**tmux**](https://github.com/jonas-mika/dotfiles/tree/main/.config/tmux) for managing terminal sessions
 - [**vim**]() as secondary (outdated) editor
-- [**vifm**]() for vim-based file managment inside the terminal
-- [**hammerspoon**]() for vim-based window managment
-- [**karabiner**]() for custom key-bindings
+- [**vifm**](https://github.com/jonas-mika/dotfiles/tree/main/.config/vifm) for vim-based file managment inside the terminal
+- [**hammerspoon**](https://github.com/jonas-mika/dotfiles/tree/main/.config/hammerspoon) for vim-based window managment
+- [**karabiner**](https://github.com/jonas-mika/dotfiles/tree/main/.config/karabiner) for custom key-bindings
 - [**brew**](https://github.com/jonas-mika/dotfiles/tree/main/.config/brew) for macOS package management
 
 ## :battery: Install
@@ -26,7 +26,7 @@ Follow these steps to install the full development environment.
 First, clone this repository in your home directory (`/Users/<your-username>`) by running this command
 
 ```
-git clone <url> $HOME
+git clone --bare <url> $HOME
 ```
 
 Set the `status.showUntrackedFiles` flag to `no` by running this command to ignore untracked files from being shown in `git status`
