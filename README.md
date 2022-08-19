@@ -1,58 +1,75 @@
 # Dofiles
 
+![https://img.shields.io/github/last-commit/jonas-mika/dotfiles]
+
 This is a repository to store all settings of my current development environment. 
 Feel free to take inspiration.
 
 ## :hammer: Toolstack 
 
-The full list fo applications and software I use every day.
+This is my current toolstack with all configurations as of 08/2022:
 
-- [**alacritty**](https://github.com/jonas-mika/dotfiles/tree/main/.config/alacritty) as primary terminal
-- [**fish**](https://github.com/jonas-mika/dotfiles/tree/main/.config/fish) as primary shell
-- [**nvim**](https://github.com/jonas-mika/dotfiles/tree/main/.config/nvim) as primary editor 
+- [**alacritty**](https://github.com/jonas-mika/dotfiles/tree/main/.config/alacritty) as my primary **terminal**
+- [**fish**](https://github.com/jonas-mika/dotfiles/tree/main/.config/fish) as my primary **shell**
+- [**nvim**](https://github.com/jonas-mika/dotfiles/tree/main/.config/nvim) as my primary **text editor**
 - [**tmux**](https://github.com/jonas-mika/dotfiles/tree/main/.config/tmux) for managing terminal sessions
-- [**vim**]() as secondary (outdated) editor
 - [**vifm**](https://github.com/jonas-mika/dotfiles/tree/main/.config/vifm) for vim-based file managment inside the terminal
-- [**hammerspoon**](https://github.com/jonas-mika/dotfiles/tree/main/.config/hammerspoon) for vim-based window managment
-- [**karabiner**](https://github.com/jonas-mika/dotfiles/tree/main/.config/karabiner) for custom key-bindings
 - [**brew**](https://github.com/jonas-mika/dotfiles/tree/main/.config/brew) for macOS package management
+- [**hammerspoon**](https://github.com/jonas-mika/dotfiles/tree/main/.config/hammerspoon) for macOS customisation
+- [**karabiner**](https://github.com/jonas-mika/dotfiles/tree/main/.config/karabiner) for custom key-bindings
 
 ## :battery: Install
 
 Follow these steps to install the full development environment.
 
-### 1. Cloning the repo
+### Clone this repository 
 
-First, clone this repository in your home directory (`/Users/<your-username>`) by running this command
+Fire up the natively installed Terminal on your new machine (`Terminal.app` on macOS) and write into the default shell (`zsh` on newer macOS version) config file (so `~/.zshrc`) to set the alias for the bare repo:
 
+```bash
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
-git clone --bare <url> $HOME
+
+Then, clone this repository in your home directory (`/Users/<your-username>`) by running this command
+
+```bash
+git clone --bare https://github.com/jonas-mika/dotfiles $HOME/.dotfiles
 ```
 
-Set the `status.showUntrackedFiles` flag to `no` by running this command to ignore untracked files from being shown in `git status`
+Checkout the contens of the bare repo by running `config checkout`. This might lead to an error, if the contents of the git repo are overwriting files that already exist on your system. 
+Try this command to move all conflicting files into a backup folder:
 
+```bash
+mkdir -p .config-backup && \
+config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+xargs -I{} mv {} .config-backup/{}
 ```
+
+Rerun, `config checkout` to check that all files are correctly cloned from git. 
+Finally, set the `status.showUntrackedFiles` flag to `no` by running this command to ignore untracked files from being shown in `git status`
+
+```bash
 git config --local status.showUntrackedFiles no
 ```
 
+:partying_face: Done, all configs should be on your system in the correct location!
 
-### 2. Brew
+### Install brew
 
-Install `brew` by following the instructions in the [README]()
+*Detailed infos [here](https://github.com/jonas-mika/dotfiles/tree/main/.config/brew)*
 
-### 3. Alacritty & Shell
+Download the macOS pacakage manager `homebrew` using
 
-Open up alacritty - the terminal. All terminal settings should be read automatically and work with no further installs. The same goes for `zsh`.
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-### 4. Neovim & Vim
+Then install all software with
 
-Now it's time to configure the editors. 
+```bash
+brew bundle --file=~/.config/brew/Brewfile
+```
 
-Neovim was installed as part of the `Brewfile`, but uses some additional plugins. Follow the instructions in the [README]() to correctly install all plugins.
+### Further Configurations
 
-Vim is a legacy editor, that I sometimes use if I want a minimal vim version. It does not require any additional plugins, so just go ahead and type `vim` and you are ready to go.
-
-### 5. Vifm
-
-### 6. Hammerspoon & Karabiner
-
+Visit all the README files from the above listed applications and follow any further installation instructions (if they exist).
