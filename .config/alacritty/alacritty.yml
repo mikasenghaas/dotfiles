@@ -458,12 +458,11 @@ unfocused_hollow: false
 
 live_config_reload: true
 
-# Shell
-#
-#shell:
-#  program: usr/bin/local/fish
-#  args:
-#    - --login
+# shell
+shell:
+  program: /opt/homebrew/bin/fish
+  args:
+    - --login
 
 working_directory: None 
 

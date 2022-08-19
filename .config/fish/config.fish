@@ -63,3 +63,6 @@ set -gx PATH node_modules/.bin $PATH
 source ~/.config/fish/plugins/hydro.rc.fish
 source ~/.config/fish/plugins/fzf.rc.fish
 source ~/.config/fish/plugins/vi.rc.fish
+
+# add path
+fish_add_path /opt/homebrew/bin
