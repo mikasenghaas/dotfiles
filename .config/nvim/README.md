@@ -55,3 +55,9 @@ For a full list of all available langauge servers, see [this page](https://githu
 npm i -g tssserver typescriptserver
 npm i -g pyright
 ```
+
+Treesitter needs to install custom language servers to provide extended syntax highlighting and indentation. Install with the command from inside `nvim`:
+
+```
+:TSInstall python javascript typescript
+```
