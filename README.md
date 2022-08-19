@@ -1,6 +1,6 @@
 # Dofiles
 
-![https://img.shields.io/github/last-commit/jonas-mika/dotfiles]
+![last-commit-badge](https://img.shields.io/github/last-commit/jonas-mika/dotfiles)
 
 This is a repository to store all settings of my current development environment. 
 Feel free to take inspiration.
