@@ -17,7 +17,8 @@ ts.setup {
     "swift",
     "css",
     "html",
-    "lua"
+    "lua",
+    "make"
   },
 
   auto_install = true,
