@@ -18,8 +18,8 @@
   co = checkout
   c = commit
   ca = commit -a
-  ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
-  pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
+  ps = push
+  pl = pull
   st = status
   b = branch
   ba = branch -a
