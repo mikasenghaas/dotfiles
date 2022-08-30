@@ -108,10 +108,13 @@ nvim_lsp.sumneko_lua.setup {
 nvim_lsp.tailwindcss.setup {}
 
 -- json lanaguage server (npm i -g vscode-langservers-extracted)
-nvim_lsp.jsonls.setup{}
+nvim_lsp.jsonls.setup {}
 
 -- python language server (npm i -g pyright)
-nvim_lsp.pyright.setup{}
+nvim_lsp.pyright.setup {}
+
+-- clangd (c language server)
+nvim_lsp.clangd.setup {}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -138,4 +141,3 @@ vim.diagnostic.config({
     source = "always", -- Or "if_many"
   },
 })
-
