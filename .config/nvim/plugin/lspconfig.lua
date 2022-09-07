@@ -3,7 +3,23 @@
 -- by: Mika Senghaas
 
 local status, nvim_lsp = pcall(require, "lspconfig")
-if (not status) then return end
+if (not status) then print("jdtls not available") return end
+
+-- setup masona and mason-lspconfig
+require("mason").setup({})
+require("mason-lspconfig").setup({
+  ensure_installed = {
+    "pyright", -- python
+    "rust_analyzer", -- rust
+    "jdtls", -- java
+    "clangd", -- c
+    "cmake", -- makefiles
+    "marksman", -- markdown
+    "typescript-language-server", -- javascript/ typescript
+    "tailwindcss-language-server" -- tailwind css
+  },
+  automatic_installation = true,
+})
 
 local protocol = require('vim.lsp.protocol')
 
@@ -21,9 +37,11 @@ local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true }
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  --buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  -- buf_set_keymap('n', '<space>k', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  -- buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   --buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 
   -- formatting
@@ -74,14 +92,6 @@ nvim_lsp.flow.setup {
   capabilities = capabilities
 }
 
--- typescript language server
-nvim_lsp.tsserver.setup {
-  on_attach = on_attach,
-  filetypes = { "javascript", "javascriptrect", "typescript", "typescriptreact", "typescript.tsx" },
-  cmd = { "typescript-language-server", "--stdio" },
-  capabilities = capabilities
-}
-
 nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
 }
@@ -104,17 +114,39 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
+-- typescript language server
+nvim_lsp.tsserver.setup {
+  on_attach = on_attach,
+  filetypes = { "javascript", "javascriptrect", "typescript", "typescriptreact", "typescript.tsx" },
+  cmd = { "typescript-language-server", "--stdio" },
+  capabilities = capabilities
+}
+
 -- tailwind
-nvim_lsp.tailwindcss.setup {}
+nvim_lsp.tailwindcss.setup {
+  on_attach = on_attach,
+}
 
 -- json lanaguage server (npm i -g vscode-langservers-extracted)
-nvim_lsp.jsonls.setup {}
+nvim_lsp.jsonls.setup {
+  on_attach = on_attach,
+}
 
 -- python language server (npm i -g pyright)
-nvim_lsp.pyright.setup {}
+nvim_lsp.pyright.setup {
+  on_attach = on_attach,
+  autostart = false,
+}
 
 -- clangd (c language server)
-nvim_lsp.clangd.setup {}
+nvim_lsp.clangd.setup {
+  on_attach = on_attach,
+}
+
+-- jdtls (java language server)
+-- nvim_lsp.jdtls.setup {
+--  on_attach = on_attach,
+--}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
