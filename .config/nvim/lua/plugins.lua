@@ -17,9 +17,9 @@ packer.startup(function(use)
 
   -- styling
   use { 'svrana/neosolarized.nvim', requires = { 'tjdevries/colorbuddy.nvim' } }
-  use 'akinsho/nvim-bufferline.lua' -- custom buffer line
-  use 'hoob3rt/lualine.nvim' -- statusline
   use 'kyazdani42/nvim-web-devicons' -- file icons
+  use { 'akinsho/bufferline.nvim', tag = "v2.5.1" } -- tab/bufferline
+  use 'hoob3rt/lualine.nvim' -- statusline
   use 'L3MON4D3/LuaSnip' -- snippets
 
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
@@ -50,6 +50,7 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim' -- fuzzy find
 
   -- highlighting
+  use 'norcalli/nvim-colorizer.lua' -- show colors
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
