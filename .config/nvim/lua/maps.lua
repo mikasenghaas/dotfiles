@@ -44,6 +44,8 @@ map('n', '<leader>sq', ':wq<cr>')
 -- tabs
 map('n', 'te', ':tabedit ')
 map('n', '<leader>n', ':tabedit<cr>')
+map('n', 'J', ':tabp<cr>')
+map('n', 'K', ':tabn<cr>')
 
 -- splits
 map('n', 'ss', ':split<cr><C-w>w')

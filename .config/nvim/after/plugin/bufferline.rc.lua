@@ -28,13 +28,10 @@ bufferline.setup({
     },
     buffer_selected = {
       guifg = '#fdf6e3',
-      gui = "bold",
+      gui = 'bold',
     },
     fill = {
       guibg = '#073642'
     }
   },
 })
-
-vim.keymap.set('n', '<S-k>', '<Cmd>BufferLineCycleNext<CR>', {})
-vim.keymap.set('n', '<S-j>', '<Cmd>BufferLineCyclePrev<CR>', {})
