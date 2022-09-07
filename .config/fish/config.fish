@@ -59,16 +59,19 @@ set -gx PATH ~/.local/bin $PATH
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
 
-# plugins configs
-source ~/.config/fish/plugins/hydro.rc.fish
-source ~/.config/fish/plugins/fzf.rc.fish
-source ~/.config/fish/plugins/vi.rc.fish
+# Java
+set -gx JAVA_HOME /usr/libexec/java_home
 
 # add path
 fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/opt/openjdk/bin
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 eval /Users/jonas-mika/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
+# plugins configs
+source ~/.config/fish/plugins/hydro.rc.fish
+source ~/.config/fish/plugins/fzf.rc.fish
+source ~/.config/fish/plugins/vi.rc.fish
