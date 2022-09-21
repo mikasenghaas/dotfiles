@@ -17,6 +17,7 @@ This is my current toolstack with all configurations as of 08/2022:
 - [**brew**](https://github.com/jonas-mika/dotfiles/tree/main/.config/brew) for macOS package management
 - [**hammerspoon**](https://github.com/jonas-mika/dotfiles/tree/main/.config/hammerspoon) for macOS customisation
 - [**karabiner**](https://github.com/jonas-mika/dotfiles/tree/main/.config/karabiner) for custom key-bindings
+- [**commitizen**](https://github.com/jonas-mika/dotfiles/tree/main/.config/commitizen) for standardised git commit messages
 
 ## :battery: Install
 
