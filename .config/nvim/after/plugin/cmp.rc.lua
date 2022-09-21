@@ -6,10 +6,12 @@ local status, cmp = pcall(require, "cmp")
 if (not status) then return end
 local lspkind = require 'lspkind'
 
+local luasnip = require('luasnip')
+
 cmp.setup({
   snippet = {
     expand = function(args)
-      require('luasnip').lsp_expand(args.body)
+      luasnip.lsp_expand(args.body)
     end,
   },
   mapping = cmp.mapping.preset.insert({
@@ -23,6 +25,7 @@ cmp.setup({
     }),
   }),
   sources = cmp.config.sources({
+    { name = 'luasnip' },
     { name = 'nvim_lsp' },
     { name = 'buffer' },
   }),

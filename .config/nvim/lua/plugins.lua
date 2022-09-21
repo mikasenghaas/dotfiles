@@ -20,7 +20,11 @@ packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons' -- file icons
   use { 'akinsho/bufferline.nvim', tag = "v2.5.1" } -- tab/bufferline
   use 'hoob3rt/lualine.nvim' -- statusline
-  use 'L3MON4D3/LuaSnip' -- snippets
+
+  -- snippet engine
+  use 'L3MON4D3/LuaSnip' -- snippet engine
+  use 'rafamadriz/friendly-snippets' -- repo of useful snippets
+  use 'saadparwaiz1/cmp_luasnip' -- integrate cmp with luasnips
 
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim built-in lsp
