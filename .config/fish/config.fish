@@ -18,7 +18,7 @@ alias root "cd /"
 alias home "cd ~"
 alias desk "cd ~/Desktop"
 alias down "cd ~/Downloads"
-alias drive='cd ~/Google\ Drive/My\ Drive'
+alias drive 'cd ~/Google\ Drive/My\ Drive'
 alias config "cd ~/.config"
 alias back "cd -"
 alias itu "cd ~/programming/itu"
