@@ -135,6 +135,7 @@ brew 'vim'
 brew 'nvim'
 
 # version control
+brew 'gh'
 brew 'git'
 brew 'git-lfs'
 
