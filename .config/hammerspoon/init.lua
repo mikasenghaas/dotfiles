@@ -29,14 +29,10 @@ APPS = {
 }
 
 -- apps
-term = hs.application.get('Alacritty')
-browser = hs.application.get('Brave Browser')
-notion = hs.application.get('Notion')
-code = hs.application.get('Visual Studio Code')
-spotify = hs.application.get('Spotify')
+local term = hs.application.get('Alacritty')
 
 -- watchers
-function hider(appName, eventType, appObject)
+local function hider(appName, eventType)
   if (eventType == hs.application.watcher.hidden) then
     print(appName, eventType)
   end
@@ -262,21 +258,19 @@ function toggle_fullscreen()
   end
 end
 
--- arrow key bindings
+-- hyper + arrow keys/ yuio to move currently active window
 hs.hotkey.bind(hyper, "up", function() up_key() end)
 hs.hotkey.bind(hyper, "down", function() down_key() end)
 hs.hotkey.bind(hyper, "right", function() right_key() end)
 hs.hotkey.bind(hyper, "left", function() left_key() end)
-
--- yuio
 hs.hotkey.bind(hyper, "i", function() up_key() end)
 hs.hotkey.bind(hyper, "u", function() down_key() end)
 hs.hotkey.bind(hyper, "o", function() right_key() end)
 hs.hotkey.bind(hyper, "y", function() left_key() end)
 
+-- hyper + f/enter to toggle full screen
 hs.hotkey.bind(hyper, "f", function() toggle_fullscreen() end)
 hs.hotkey.bind(hyper, "return", function() toggle_fullscreen() end)
-hs.hotkey.bind(hyper, "p", function() print(checkPos(M)) end)
 
 -- open term
 hs.hotkey.bind('alt', 'space', function()
