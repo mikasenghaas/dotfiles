@@ -5,6 +5,16 @@
 local status, null_ls = pcall(require, 'null-ls')
 if (not status) then return end
 
+-- surpress client offset warning (https://github.com/jose-elias-alvarez/null-ls.nvim/issues/428)
+local notify = vim.notify
+vim.notify = function(msg, ...)
+  if msg:match("warning: multiple different client offset_encodings") then
+    return
+  end
+
+  notify(msg, ...)
+end
+
 null_ls.setup {
   on_attach = function(client, bufnr)
     if client.server_capabilities.documentFormattingProvider then
