@@ -9,7 +9,9 @@ if (not status) then return end
 require("luasnip.loaders.from_vscode").lazy_load()
 
 -- load custom snippets (configured in lua)
-require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/luasnippets/" })
+require("luasnip.loaders.from_lua").load({
+  paths = "~/.config/nvim/luasnippets/"
+})
 
 ls.config.set_config({
   history = true,
