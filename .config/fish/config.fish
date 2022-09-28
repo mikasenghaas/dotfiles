@@ -61,6 +61,7 @@ set -gx PATH node_modules/.bin $PATH
 
 # Java
 set -gx JAVA_HOME /usr/libexec/java_home
+set CLASSPATH .
 
 # add path
 fish_add_path /opt/homebrew/bin
