@@ -90,6 +90,7 @@ cask 'sublime-text'
 cask 'macdown'
 cask 'visual-studio-code'
 cask 'tableplus'
+cask 'intellij-idea'
 
 # music
 cask 'spotify'
