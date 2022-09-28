@@ -7,7 +7,7 @@ local i = ls.insert_node
 
 local boil = s("boil", {
   t({
-    "import java.util.*",
+    "import java.util.*;",
     "",
     "public class ",
   }),
