@@ -1,26 +1,14 @@
--- custom global lua snippets
+-- c lua snippets
 
 local ls = require("luasnip")
 local s = ls.snippet
 local t = ls.text_node
+local i = ls.insert_node
 
-local function file_exists(file)
-  local f = io.open(file, "rb")
-  if f then f:close() end
-  return f ~= nil
-end
-
--- open template file
-local lines = {}
-local file = "~/.config/nvim/luasnippets/template.c"
-if file_exists(file) then
-  for line in io.lines(file) do
-    lines[#lines + 1] = line
-  end
-end
-
-local template = s("template", {
-  t(lines)
+local boil = s("boil", {
+  t({ "#include <stdio.h>", "#include <stdlib.h>", "", "int main() {" }),
+  i(0),
+  t({ "", "  return 0;", "}" })
 })
 
-return { template }
+return { boil }
