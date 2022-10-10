@@ -17,11 +17,18 @@ end
 
 null_ls.setup {
   on_attach = function(client, bufnr)
+
     if client.server_capabilities.documentFormattingProvider then
-      vim.api.nvim_command [[augroup Format]]
-      vim.api.nvim_command [[autocmd! * <buffer>]]
-      vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
-      vim.api.nvim_command [[augroup END]]
+      --vim.api.nvim_command [[augroup Format]]
+      --vim.api.nvim_command [[autocmd! * <buffer>]]
+      --vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+      --vim.api.nvim_command [[augroup END]]
+
+      vim.cmd("nnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.formatting()<CR>")
+
+
+      -- format on save
+      vim.cmd("autocmd BufWritePost <buffer> lua vim.lsp.buf.formatting()")
     end
   end,
   sources = {
