@@ -16,5 +16,8 @@ prettier.setup {
     'typescriptreact',
     'json',
     'less'
+  },
+  cli_options = {
+    config_precedence = "prefer-file"
   }
 }
