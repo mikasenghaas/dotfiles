@@ -169,6 +169,9 @@ brew 'tree-sitter'
 
 brew 'chromedriver' # selenium webdriver
 
+# node 
+brew 'corepack'
+
 # compilers
 brew 'gcc'
 
