@@ -69,6 +69,7 @@ tap 'homebrew/services'
 # browser
 cask 'brave-browser'
 cask 'google-chrome'
+cask 'sizzy'
 cask 'min'
 
 # socials
