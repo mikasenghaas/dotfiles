@@ -10,26 +10,10 @@ hs.alert.defaultStyle.radius = 10
 hs.window.animationDuration = 0
 M = 10 -- window margin
 
-APPS = {
-  'Alacritty',
-  'Terminal',
-  'iTerm2',
-  'Brave',
-  'Google Chrome',
-  'Safari',
-  'Calendar',
-  'WhatsApp',
-  'Messages',
-  'Spotify',
-  'RStudio',
-  'Visual Studio Code',
-  'Spark',
-  'Slack',
-  'Notion'
-}
-
 -- apps
-local term = hs.application.get('Alacritty')
+local alacritty = hs.application.get('Alacritty')
+local inkdrop = hs.application.get('Inkdrop')
+local min = hs.application.get('Min')
 
 -- watchers
 local function hider(appName, eventType)
@@ -247,8 +231,8 @@ hs.window.filter.default:subscribe(
   end
 end)
 
-function toggle_fullscreen()
-  curr = checkPos(M)
+local function toggleFullscreen()
+  local curr = checkPos(M)
   if curr ~= 'full' then
     local win = hs.window.focusedWindow()
     pushFull(win, M)
@@ -269,24 +253,28 @@ hs.hotkey.bind(hyper, "o", function() right_key() end)
 hs.hotkey.bind(hyper, "y", function() left_key() end)
 
 -- hyper + f/enter to toggle full screen
-hs.hotkey.bind(hyper, "f", function() toggle_fullscreen() end)
-hs.hotkey.bind(hyper, "return", function() toggle_fullscreen() end)
+hs.hotkey.bind(hyper, "f", function() toggleFullscreen() end)
+hs.hotkey.bind(hyper, "return", function() toggleFullscreen() end)
 
--- open term
-hs.hotkey.bind('alt', 'space', function()
-  if term then
-    if term:isFrontmost() then
-      term:hide()
+-- toggle applications with hotkeys
+function toggleApplication(app, appName)
+  if app then
+    if app:isFrontmost() then
+      app:hide()
     else
-      term:activate()
-      pushFull(term:focusedWindow(), M)
+      app:activate()
+      pushFull(app:focusedWindow(), M)
     end
   else
-    hs.application.launchOrFocus("Alacritty")
-    term = hs.application.get("Alacritty")
+    hs.application.launchOrFocus(appName)
+    app = hs.application.get(appName)
   end
   hs.window.animationDuration = 0
-end)
+end
+
+hs.hotkey.bind('alt', 'space', function() toggleApplication(alacritty, "Alacritty") end)
+hs.hotkey.bind('shift', 'space', function() toggleApplication(min, "Min") end)
+hs.hotkey.bind(hyper, 'space', function() toggleApplication(inkdrop, "Inkdrop") end)
 
 -- reload configs with HYPER+R
 hs.hotkey.bindSpec({ hyper, 'r' }, hs.reload)
