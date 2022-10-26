@@ -1,7 +1,7 @@
 -- maps.lua
 --  key mappings
 -- by: mika senghaas
---
+
 local function map(mode, lhs, rhs, opts)
   local options = { noremap = true, silent = true }
   if opts then
@@ -19,22 +19,12 @@ map('', '<down>', '<nop>')
 map('', '<left>', '<nop>')
 map('', '<right>', '<nop>')
 
--- disable yank on delete
-map('n', 'x', '"_x')
-
 -- change modes
 map('i', 'kj', '<esc>')
 map('v', 'iu', '<esc>')
 
--- basic navigation
-map('n', '<leader>l', '$')
-map('n', '<leader>h', '^')
-map('n', '<leader>j', 'G')
-map('n', '<leader>k', 'gg')
-map('v', '<leader>l', '$')
-map('v', '<leader>h', '^')
-map('v', '<leader>j', 'G')
-map('v', '<leader>k', 'gg')
+-- change yank on delete
+map('n', 'x', '"_x')
 
 -- exit files
 map('n', '<leader>q', ':q<cr>')
@@ -54,9 +44,6 @@ map('n', 'sv', ':vsplit<cr><C-w>w')
 -- move lines
 map('v', '<C-j>', ":m '>+1<cr>gv")
 map('v', '<C-k>', ":m '<-2<cr>gv")
-
--- joining lines
-map('n', '<S-f>', ':join<cr>')
 
 -- increment/ decrement
 map('n', '+', '<C-a>')
