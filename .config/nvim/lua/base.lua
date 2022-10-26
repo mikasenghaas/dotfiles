@@ -24,6 +24,7 @@ vim.opt.laststatus = 2
 vim.opt.expandtab = true
 vim.opt.scrolloff = 10
 vim.opt.shell = 'zsh'
+vim.opt.relativenumber = true
 vim.opt.backupskip = { '/tmp/*', '/private/tmp/*' }
 vim.opt.inccommand = 'split'
 vim.opt.ignorecase = true
