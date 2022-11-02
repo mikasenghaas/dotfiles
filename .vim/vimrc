@@ -1,0 +1,6 @@
+" minimal vim settings
+" by: mika senghaas
+
+"cursor
+source ~/.vim/base.vim
+source ~/.vim/maps.vim

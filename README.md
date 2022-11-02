@@ -7,11 +7,12 @@ Feel free to take inspiration.
 
 ## :hammer: Toolstack 
 
-This is my current toolstack with all configurations as of 08/2022:
+This is my current toolstack with all configurations as of 11/2022:
 
 - [**alacritty**](https://github.com/jonas-mika/dotfiles/tree/main/.config/alacritty) as my primary **terminal**
 - [**fish**](https://github.com/jonas-mika/dotfiles/tree/main/.config/fish) as my primary **shell**
 - [**nvim**](https://github.com/jonas-mika/dotfiles/tree/main/.config/nvim) as my primary **text editor**
+- [**vim**](https://github.com/jonas-mika/dotfiles/tree/main/.vim) for a minimal vim setup (used for Vim emulations and on VMs)
 - [**tmux**](https://github.com/jonas-mika/dotfiles/tree/main/.config/tmux) for managing terminal sessions
 - [**vifm**](https://github.com/jonas-mika/dotfiles/tree/main/.config/vifm) for vim-based file managment inside the terminal
 - [**brew**](https://github.com/jonas-mika/dotfiles/tree/main/.config/brew) for macOS package management
