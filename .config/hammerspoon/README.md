@@ -30,4 +30,4 @@ The shortcuts follow vim-navigations on the top-row of the keyboard
 - `<HYPER>-HJKL`: Native arrow keys
 - `<HYPER>-C`: Open Alfred clipboard history
 
-*Note: `<HYPER>` is mapped in [karabiner](https://github.com/jonas-mika/dotfiles/tree/main/.config/karabiner) to `<Ctrl>`/ `<Option>`/ `<Command>`/ `<Shift>`.*
+*Note: `<HYPER>` is mapped in [karabiner](https://github.com/mikasenghaas/dotfiles/tree/main/.config/karabiner) to `<Ctrl>`/ `<Option>`/ `<Command>`/ `<Shift>`.*

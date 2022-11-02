@@ -1,6 +1,6 @@
 # Dofiles
 
-![last-commit-badge](https://img.shields.io/github/last-commit/jonas-mika/dotfiles)
+![last-commit-badge](https://img.shields.io/github/last-commit/mikasenghaas/dotfiles)
 
 This is a repository to store all settings of my current development environment. 
 Feel free to take inspiration.
@@ -9,16 +9,16 @@ Feel free to take inspiration.
 
 This is my current toolstack with all configurations as of 11/2022:
 
-- [**alacritty**](https://github.com/jonas-mika/dotfiles/tree/main/.config/alacritty) as my primary **terminal**
-- [**fish**](https://github.com/jonas-mika/dotfiles/tree/main/.config/fish) as my primary **shell**
-- [**nvim**](https://github.com/jonas-mika/dotfiles/tree/main/.config/nvim) as my primary **text editor**
-- [**vim**](https://github.com/jonas-mika/dotfiles/tree/main/.vim) for a minimal vim setup (used for Vim emulations and on VMs)
-- [**tmux**](https://github.com/jonas-mika/dotfiles/tree/main/.config/tmux) for managing terminal sessions
-- [**vifm**](https://github.com/jonas-mika/dotfiles/tree/main/.config/vifm) for vim-based file managment inside the terminal
-- [**brew**](https://github.com/jonas-mika/dotfiles/tree/main/.config/brew) for macOS package management
-- [**hammerspoon**](https://github.com/jonas-mika/dotfiles/tree/main/.config/hammerspoon) for macOS customisation
-- [**karabiner**](https://github.com/jonas-mika/dotfiles/tree/main/.config/karabiner) for custom key-bindings
-- [**commitizen**](https://github.com/jonas-mika/dotfiles/tree/main/.config/commitizen) for standardised git commit messages
+- [**alacritty**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/alacritty) as my primary **terminal**
+- [**fish**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/fish) as my primary **shell**
+- [**nvim**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/nvim) as my primary **text editor**
+- [**vim**](https://github.com/mikasenghaas/dotfiles/tree/main/.vim) for a minimal vim setup (used for Vim emulations and on VMs)
+- [**tmux**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/tmux) for managing terminal sessions
+- [**vifm**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/vifm) for vim-based file managment inside the terminal
+- [**brew**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/brew) for macOS package management
+- [**hammerspoon**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/hammerspoon) for macOS customisation
+- [**karabiner**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/karabiner) for custom key-bindings
+- [**commitizen**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/commitizen) for standardised git commit messages
 
 ## :battery: Install
 
@@ -35,7 +35,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 Then, clone this repository in your home directory (`/Users/<your-username>`) by running this command
 
 ```bash
-git clone --bare https://github.com/jonas-mika/dotfiles $HOME/.dotfiles
+git clone --bare https://github.com/mikasenghaas/dotfiles $HOME/.dotfiles
 ```
 
 Checkout the contens of the bare repo by running `config checkout`. This might lead to an error, if the contents of the git repo are overwriting files that already exist on your system. 
@@ -58,7 +58,7 @@ git config --local status.showUntrackedFiles no
 
 ### Install brew
 
-*Detailed infos [here](https://github.com/jonas-mika/dotfiles/tree/main/.config/brew)*
+*Detailed infos [here](https://github.com/mikasenghaas/dotfiles/tree/main/.config/brew)*
 
 Download the macOS pacakage manager `homebrew` using
 
