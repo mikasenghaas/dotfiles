@@ -14,7 +14,6 @@ This is my current toolstack with all configurations as of 11/2022:
 - [**nvim**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/nvim) as my primary **text editor**
 - [**vim**](https://github.com/mikasenghaas/dotfiles/tree/main/.vim) for a minimal vim setup (used for Vim emulations and on VMs)
 - [**tmux**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/tmux) for managing terminal sessions
-- [**vifm**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/vifm) for vim-based file managment inside the terminal
 - [**brew**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/brew) for macOS package management
 - [**hammerspoon**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/hammerspoon) for macOS customisation
 - [**karabiner**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/karabiner) for custom key-bindings
