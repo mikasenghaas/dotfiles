@@ -5,9 +5,6 @@
 # disable fish greeting
 set fish_greeting ""
 
-# set term
-set -gx TERM xterm-256color
-
 ### aliases
 
 # nav
