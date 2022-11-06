@@ -1,3 +1,0 @@
--- macos.lua
---  settings for macos env
--- by: mika senghaas

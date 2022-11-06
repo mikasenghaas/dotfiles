@@ -1,11 +1,11 @@
--- treesitter.rc.lua
+-- treesitter.lua
 --  configs for tree sitter
 -- by: Mika Senghaas
 
-local status, ts = pcall(require, "nvim-treesitter.configs")
+local status, treesitter = pcall(require, "nvim-treesitter.configs")
 if (not status) then return end
 
-ts.setup {
+treesitter.setup {
   ensure_installed = {
     "tsx",
     "toml",
@@ -24,19 +24,19 @@ ts.setup {
   auto_install = true,
 
   highlight = {
-    enable = true,
+    -- find the highlighting quite ugly
+    enable = false,
     disable = {},
   },
 
   indent = {
+    -- more reliable than native lua indent
     enable = true,
     disable = { "python" },
   },
 
   autotag = {
+    -- necessary to get autotag to work
     enable = true,
   },
 }
-
-local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }

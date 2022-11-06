@@ -1,3 +1,0 @@
--- macos.lua
---  settings for windows env
--- by: mika senghaas

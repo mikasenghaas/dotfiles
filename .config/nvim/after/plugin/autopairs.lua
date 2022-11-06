@@ -1,6 +1,6 @@
--- autopair.rc.lua
+-- autopair.lua
 --  configs for autopair
--- by: Mika Senghaas
+-- by: mika senghaas
 
 local status, autopairs = pcall(require, "nvim-autopairs")
 if (not status) then return end

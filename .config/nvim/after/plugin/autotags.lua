@@ -1,4 +1,4 @@
--- autotag.rc.lua
+-- autotag.lua
 --  configs for autotag
 -- by: Mika Senghaas
 

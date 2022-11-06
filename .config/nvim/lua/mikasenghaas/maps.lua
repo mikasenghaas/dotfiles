@@ -26,11 +26,6 @@ map('v', 'iu', '<esc>')
 -- change yank on delete
 map('n', 'x', '"_x')
 
--- exit files
-map('n', '<leader>q', ':q<cr>')
-map('n', '<leader>s', ':w<cr>')
-map('n', '<leader>sq', ':wq<cr>')
-
 -- tabs
 map('n', 'te', ':tabedit ')
 map('n', '<leader>n', ':tabedit<cr>')
@@ -40,17 +35,6 @@ map('n', 'K', ':tabn<cr>')
 -- splits
 map('n', 'ss', ':split<cr><C-w>w')
 map('n', 'sv', ':vsplit<cr><C-w>w')
-
--- move lines
-map('v', '<C-j>', ":m '>+1<cr>gv")
-map('v', '<C-k>', ":m '<-2<cr>gv")
-
--- increment/ decrement
-map('n', '+', '<C-a>')
-map('n', '-', '<C-x>')
-
--- delete backwards
-map('n', 'dw', 'vb"_d')
 
 -- select all
 map('n', '<leader>a', 'gg<S-v>G')
