@@ -4,9 +4,6 @@
 import:
   - "~/.config/alacritty/colors/tokyo-night.yml"
 
-env:
-  TERM: xterm-256-color
-
 # window settings
 window:
   columns: 0
