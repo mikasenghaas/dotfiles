@@ -66,7 +66,7 @@ fish_add_path /opt/homebrew/opt/openjdk/bin
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-eval /Users/jonas-mika/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+eval ~/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
 # plugins configs
