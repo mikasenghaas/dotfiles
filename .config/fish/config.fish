@@ -53,12 +53,19 @@ set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
 
-# NodeJS
+# node
 set -gx PATH node_modules/.bin $PATH
 
-# Java
-set -gx JAVA_HOME /usr/libexec/java_home
+# java
 set CLASSPATH .
+
+# java versions
+alias java8 "set -x JAVA_HOME (/usr/libexec/java_home -v 1.8.0); java -version"
+alias java17 "set -x JAVA_HOME (/usr/libexec/java_home -v 17); java -version"
+alias java19 "set -x JAVA_HOME (/usr/libexec/java_home -v 19); java -version"
+
+# default java sdk to latest java install (java19)
+set -x JAVA_HOME (/usr/libexec/java_home)
 
 # add path
 fish_add_path /opt/homebrew/bin
