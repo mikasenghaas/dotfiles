@@ -175,6 +175,11 @@ brew 'corepack'
 # compilers
 brew 'gcc'
 
+# java
+cask 'temurin8'
+cask 'temurin17'
+cask 'temurin19'
+
 # miscellaneous
 brew 'curl', link: true
 brew 'wget'
