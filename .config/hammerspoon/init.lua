@@ -214,22 +214,22 @@ end
 
 -- function to toggle fullscreen/ previous position
 -- watch changed focus of windows
-hs.window.filter.default:subscribe(
-  hs.window.filter.windowFocused, function(window, appName)
-  local f = window:frame()
-  focused = { win = window, x = f.x, y = f.y, w = f.w, h = f.h }
-  print("Focused: ", window:application():name())
-end)
+--hs.window.filter.default:subscribe(
+--  hs.window.filter.windowFocused, function(window, appName)
+--  local f = window:frame()
+--  focused = { win = window, x = f.x, y = f.y, w = f.w, h = f.h }
+--  print("Focused: ", window:application():name())
+--end)
 
 -- watch resize of windows
-hs.window.filter.default:subscribe(
-  hs.window.filter.windowMoved, function(window, appName)
-  local f = window:frame()
-  if checkPos(M) ~= 'full' then
-    focused = { win = window, x = f.x, y = f.y, w = f.w, h = f.h }
-    print("Moved: ", window:application():name())
-  end
-end)
+--hs.window.filter.default:subscribe(
+--  hs.window.filter.windowMoved, function(window, appName)
+--  local f = window:frame()
+--  if checkPos(M) ~= 'full' then
+--    focused = { win = window, x = f.x, y = f.y, w = f.w, h = f.h }
+--    print("Moved: ", window:application():name())
+--  end
+--end)
 
 local function toggleFullscreen()
   local curr = checkPos(M)
