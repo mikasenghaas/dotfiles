@@ -20,6 +20,7 @@ vim.opt.relativenumber = true -- relative line numbering
 
 -- tabs + indentation
 vim.opt.autoindent = true -- automatically indent
+vim.opt.tabstop = 2 -- \t uses 2 two whitespaces
 vim.opt.softtabstop = 2 -- number of spaces of tab when editing
 vim.opt.shiftwidth = 2  -- number of spaces for auto indent
 vim.opt.expandtab = true -- use spaces on press to tab
@@ -38,6 +39,7 @@ vim.opt.title = true
 vim.opt.wrap = false -- no line wrapping
 vim.opt.cmdheight = 1 -- height of command line
 vim.opt.laststatus = 2 -- makes lualine also show in split views
+vim.opt.scrolloff = 5
 
 -- mouse
 vim.opt.mouse = 'a'
