@@ -13,11 +13,11 @@ vim.cmd("command CmpStop lua require('cmp').setup.buffer { enabled = false }")
 
 cmp.setup {
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'buffer' },
-    { name = 'path' },
-    { name = 'luasnip' },
-    { name = 'emoji' },
+    { name = 'luasnip', priority = 5 },
+    { name = 'nvim_lsp', priority = 4 },
+    { name = 'path', priority = 3 },
+    { name = 'buffer', priority = 2 },
+    { name = 'emoji', priority = 1 },
   }),
   mapping = cmp.mapping.preset.insert({
     ['<Esc>'] = cmp.mapping.close(),
