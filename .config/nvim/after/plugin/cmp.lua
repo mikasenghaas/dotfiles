@@ -42,7 +42,7 @@ cmp.setup {
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       local luasnip = require "luasnip"
       if cmp.visible() then
-          cmp.select_next_item()
+          cmp.select_prev_item()
       elseif luasnip.expandable() then
           luasnip.expand()
       elseif luasnip.expand_or_jumpable() then
