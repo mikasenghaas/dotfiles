@@ -25,10 +25,13 @@ nvim_lsp.tailwindcss.setup { on_attach = on_attach }
 nvim_lsp.jsonls.setup { on_attach = on_attach }
 
 -- python language server
-nvim_lsp.pyright.setup{ on_attach = on_attach, autostart = false }
+nvim_lsp.pyright.setup{ on_attach = on_attach }
 
 -- clangd (c language server)
 nvim_lsp.clangd.setup { on_attach = on_attach ,autostart = false }
+
+-- clangd (c language server)
+nvim_lsp.rust_analyzer.setup { on_attach = on_attach }
 
 -- set diagnostics to update in insert mode
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
