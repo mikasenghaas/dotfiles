@@ -152,13 +152,16 @@ brew 'postgresql'
 brew 'mutt'
 brew 'neomutt'
 
+# python
+brew 'pyenv'
+brew 'pyenv-virtualenv'
+brew 'python3'
+
 # programming
 brew 'node'
 brew 'jo'
 brew 'lua'
-brew 'python'
 brew 'java'
-brew 'python3'
 brew 'r'
 brew 'rust'
 brew 'scala'
