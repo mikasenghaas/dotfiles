@@ -7,8 +7,12 @@ set encoding=utf-8
 set undodir=~/.vim/undodir
 set mouse=a
 set nobackup
+set nowrap
 set scrolloff=10
 
+" syntax
+syntax on
+ 
 " search
 set incsearch
 set nohlsearch
