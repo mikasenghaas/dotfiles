@@ -1,59 +1,9 @@
-#
-# Brewfile by Jonas-Mika Senghaas
-#
-# ## Introduction
-#
-# This file installs many apps, including office suites, multimedia suites,
-# programming langauges, unix utilities, sysadmin tools, and fonts.
-#
-# This file is organized in meaningful sections in order to 
-# make it easy for you to pick and choose sections that you want.
-#
-# There are many TODO items in this file. If you want, help us
-# describe these and organize them into the relevant sections.
-#
-# The file is generally organized in these sections:
-#
-#   * Software that's fine for everyone,
-#     e.g., browsers, players, editors.
-#
-#   * Software that's especially suitable for programmers,
-#     e.g., compilers, databases, languages, servers, etc.
-#
-#   * Paid software that requires a license or purchase,
-#     e.g. JetBrains, OmniGroup, Paw, etc.
-#
-#   * Libraries: operating system libraries e.g. lib*.
-#
-#   * TODO: a section of uncategorized software.
-#
-#   * Fonts
-#
-# ### About Brewfile capabilities
-#
-# To learn about Brewfile capabilties, please see:
-#
-#   * http://brew.sh/
-#   * http://homebrew-file.readthedocs.io/
-#   * https://github.com/Homebrew/homebrew-bundle
-#
-#
-# ### Usage
-#
-# To use this Brewfile via `brew bundle`:
-#
-#     $ brew bundle
-#
-# To use this Brewfile via `brew-file`, which has more capabilties than bundle:
-#
-#     $ brew install rcmdnk/file/brew-file
-#     $ brew file init
-#     Do you want to set a repository (y)? ((n) for local Brewfile). [y/n]: y
-#     Set repository, "non" for local Brewfile,
-#     <user>/<repo> for github repository,
-#     or full path for the repository: joelparkerhenderson/brewfile
+# brewfile
+# by: mika senghaas
 
-# Tap homebrew
+###############
+# HOMEBREW CORE
+###############
 tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
@@ -93,20 +43,13 @@ cask 'visual-studio-code'
 cask 'intellij-idea-ce'
 cask 'tableplus'
 
-# music
+# misc
 cask 'spotify'
-
-# notes
 cask 'notion'
-
-# productivity
 cask 'alfred'
 cask 'bartender'
 cask 'hammerspoon'
 cask 'karabiner-elements'
-cask 'stats'
-cask 'witch'
-cask 'dash'
 cask 'todoist'
 cask '1password'
 
@@ -114,7 +57,12 @@ cask '1password'
 # BREWS (Packages)
 ############################
 
-# terminal-enhancement
+# shells
+brew 'bash'
+brew 'zsh'
+brew 'fish'
+
+# terminal tools
 brew 'fzf'
 brew 'tmux' 
 brew 'vifm'
@@ -122,35 +70,27 @@ brew 'autojump'
 brew 'highlight'
 brew 'tree'
 brew 'exa'
-
-# shells
-brew 'bash'
-brew 'zsh'
-brew 'fish'
-
-# editors
+brew 'zstd'
+brew 'unzip'
 brew 'bat'
 brew 'less'
 brew 'most'
+brew 'curl'
+brew 'wget'
+brew 'htop'
+
+# editors
 brew 'vim'
 brew 'nvim'
 
-# version control
+# git
 brew 'gh'
 brew 'git'
 brew 'git-lfs'
 
-# file compression
-brew 'zstd'
-brew 'unzip'
-
 # database software
 brew 'mysql'
 brew 'postgresql'
-
-# mail
-brew 'mutt'
-brew 'neomutt'
 
 # python
 brew 'pyenv'
@@ -170,8 +110,6 @@ brew 'netlify-cli'
 brew 'lua-language-server'
 brew 'tree-sitter'
 
-brew 'chromedriver' # selenium webdriver
-
 # node 
 brew 'corepack'
 
@@ -183,10 +121,7 @@ cask 'temurin8'
 cask 'temurin17'
 cask 'temurin19'
 
-# miscellaneous
-brew 'curl', link: true
-brew 'wget'
-brew 'arduino-cli'
+# misc
 brew 'cmake'
 brew 'cscope'
 brew 'fd'
@@ -194,7 +129,6 @@ brew 'go'
 brew 'graph-tool'
 brew 'graphviz'
 brew 'gtk+'
-brew 'htop'
 brew 'imagemagick'
 brew 'lazygit'
 brew 'libvterm'
@@ -210,10 +144,9 @@ brew 'sdl_image'
 brew 'sdl_mixer'
 brew 'sdl_ttf'
 brew 'the_silver_searcher'
-brew 'spotify-tui'
 
 ############################
-# FONTS (Packages)
+# FONTS 
 ############################
 
 cask 'font-3270'
