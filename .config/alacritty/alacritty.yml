@@ -47,7 +47,7 @@ tabspaces: 2
 
 # Font configuration
 font:
-  size: 14.0
+  size: 24.0
   normal:
     family: Hack Nerd Font Mono
     style: Regular
