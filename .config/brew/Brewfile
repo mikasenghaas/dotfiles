@@ -78,6 +78,7 @@ brew 'most'
 brew 'curl'
 brew 'wget'
 brew 'htop'
+brew 'tldr'
 
 # editors
 brew 'vim'
