@@ -12,7 +12,6 @@ M = 10 -- window margin
 
 -- apps
 local alacritty = hs.application.get('Alacritty')
-local inkdrop = hs.application.get('Inkdrop')
 local min = hs.application.get('Min')
 
 -- watchers
@@ -252,8 +251,7 @@ hs.hotkey.bind(hyper, "u", function() down_key() end)
 hs.hotkey.bind(hyper, "o", function() right_key() end)
 hs.hotkey.bind(hyper, "y", function() left_key() end)
 
--- hyper + f/enter to toggle full screen
-hs.hotkey.bind(hyper, "f", function() toggleFullscreen() end)
+-- hyper + enter to toggle full screen
 hs.hotkey.bind(hyper, "return", function() toggleFullscreen() end)
 
 -- toggle applications with hotkeys
@@ -272,9 +270,8 @@ function toggleApplication(app, appName)
   hs.window.animationDuration = 0
 end
 
-hs.hotkey.bind('alt', 'space', function() toggleApplication(alacritty, "Alacritty") end)
+hs.hotkey.bind(hyper, 'space', function() toggleApplication(alacritty, "Alacritty") end)
 hs.hotkey.bind('shift', 'space', function() toggleApplication(min, "Min") end)
-hs.hotkey.bind(hyper, 'space', function() toggleApplication(inkdrop, "Inkdrop") end)
 
 -- reload configs with HYPER+R
 hs.hotkey.bindSpec({ hyper, 'r' }, hs.reload)
