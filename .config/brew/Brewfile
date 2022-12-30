@@ -65,6 +65,7 @@ brew 'fish'
 # terminal tools
 brew 'fzf'
 brew 'tmux' 
+brew 'tmux-mem-cpu-load'
 brew 'vifm'
 brew 'autojump'
 brew 'highlight'
