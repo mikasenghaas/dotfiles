@@ -169,29 +169,27 @@ key_bindings:
   - { key: Minus,    mods: Command, action: DecreaseFontSize             }
 
   # tmux settings
-  - { key: D,        mods: Command,       chars: "\x01\x22" } # split horizontally
-  - { key: D,        mods: Command|Shift, chars: "\x01\x25" } # split vertically
-  - { key: H,        mods: Command,       chars: "\x01\x68" } # focus pane left
-  - { key: J,        mods: Command,       chars: "\x01\x6a" } # focus split down
-  - { key: K,        mods: Command,       chars: "\x01\x6b" } # focus split up
-  - { key: L,        mods: Command,       chars: "\x01\x6c" } # focus pane right
-  - { key: T,        mods: Command,       chars: "\x01\x63" } # new tab
-  - { key: W,        mods: Command,       chars: "\x01\x78" } # close tab (window if only one tab)
-  - { key: B,        mods: Command,       chars: "\x01\x62" }
-  - { key: J,        mods: Command|Shift, chars: "\x01\x70" } # previous window 
-  - { key: K,        mods: Command|Shift, chars: "\x01\x6e" } # next window 
-  - { key: F,        mods: Command,       chars: "\x01\x66" } # launch fzf session switcher
-  - { key: O,        mods: Command,       chars: "\x01\x6f" } # open scratch session
-  - { key: I,        mods: Command,       chars: "\x01\x69" } # open notes session
-  - { key: U,        mods: Command,       chars: "\x01\x75" } # switch to spotify session
-  - { key: L,        mods: Command|Shift, chars: "\x01\x4c" } # last session
-  - { key: P,        mods: Command,       chars: "\x01\x7a" } # last session
+  - { key: D,        mods: Command,       chars: "\x02\x22" } # split horizontally
+  - { key: D,        mods: Command|Shift, chars: "\x02\x25" } # split vertically
+  - { key: H,        mods: Command,       chars: "\x02\x68" } # focus pane left
+  - { key: J,        mods: Command,       chars: "\x02\x6a" } # focus split down
+  - { key: K,        mods: Command,       chars: "\x02\x6b" } # focus split up
+  - { key: L,        mods: Command,       chars: "\x02\x6c" } # focus pane right
+  - { key: T,        mods: Command,       chars: "\x02\x63" } # new window
+  - { key: W,        mods: Command,       chars: "\x02\x78" } # close pane (window if only one tab)
+  - { key: J,        mods: Command|Shift, chars: "\x02\x70" } # previous window 
+  - { key: K,        mods: Command|Shift, chars: "\x02\x6e" } # next window 
+  - { key: F,        mods: Command,       chars: "\x02\x66" } # launch fzf session switcher
+  - { key: O,        mods: Command,       chars: "\x02\x6f" } # open scratch session
+  - { key: I,        mods: Command,       chars: "\x02\x69" } # open notes session
+  - { key: L,        mods: Command|Shift, chars: "\x02\x4c" } # last session
+  - { key: P,        mods: Command,       chars: "\x02\x7a" } # maximise current pane
 
   # pane resizing
-  - { key: Left,     mods: Command,       chars: "\x01\x48" }
-  - { key: Down,     mods: Command,       chars: "\x01\x4a" }
-  - { key: Up,       mods: Command,       chars: "\x01\x4b" }
-  - { key: Right,    mods: Command,       chars: "\x01\x4c" }
+  - { key: Left,     mods: Command,       chars: "\x02\x48" }
+  - { key: Down,     mods: Command,       chars: "\x02\x4a" }
+  - { key: Up,       mods: Command,       chars: "\x02\x4b" }
+  - { key: Right,    mods: Command,       chars: "\x02\x4c" }
 
 
   # get control keys to work within alacritty mac
