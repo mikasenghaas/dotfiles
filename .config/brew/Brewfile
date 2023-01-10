@@ -52,6 +52,7 @@ cask 'hammerspoon'
 cask 'karabiner-elements'
 cask 'todoist'
 cask '1password'
+brew '1password-cli'
 
 ############################
 # BREWS (Packages)
