@@ -21,6 +21,12 @@ nvim_lsp.tsserver.setup {
 -- tailwind
 nvim_lsp.tailwindcss.setup { on_attach = on_attach }
 
+-- tailwind
+nvim_lsp.astro.setup { on_attach = on_attach }
+
+-- css
+nvim_lsp.cssls.setup { on_attach = on_attach }
+
 -- json lanaguage
 nvim_lsp.jsonls.setup { on_attach = on_attach }
 
