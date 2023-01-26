@@ -47,12 +47,16 @@ set CLASSPATH .
 alias java8 "set -x JAVA_HOME (/usr/libexec/java_home -v 1.8.0); java -version"
 alias java17 "set -x JAVA_HOME (/usr/libexec/java_home -v 17); java -version"
 alias java19 "set -x JAVA_HOME (/usr/libexec/java_home -v 19); java -version"
+set -x JAVA_HOME (/usr/libexec/java_home)
+fish_add_path /Library/Java
 
 # python
 pyenv init - | source
 
-# default java sdk to latest java install (java19)
-set -x JAVA_HOME (/usr/libexec/java_home)
+# r
+set -gx LANG en_US.UTF-8
+set -gx LC_ALL en_US.UTF-8
+
 
 # plugins configs
 source ~/.config/fish/plugins/hydro.rc.fish
