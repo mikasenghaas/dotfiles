@@ -43,6 +43,9 @@ cask 'visual-studio-code'
 cask 'rstudio'
 cask 'tableplus'
 
+# sdk
+cask 'dotnet-sdk'
+
 # misc
 cask 'spotify'
 cask 'notion'
@@ -52,7 +55,9 @@ cask 'hammerspoon'
 cask 'karabiner-elements'
 cask 'todoist'
 cask '1password'
+cask 'zotero'
 brew '1password-cli'
+
 
 ############################
 # BREWS (Packages)
