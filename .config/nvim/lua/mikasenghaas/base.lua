@@ -43,3 +43,8 @@ vim.opt.scrolloff = 5
 
 -- mouse
 vim.opt.mouse = 'a'
+
+-- fsharp-ionide
+vim.cmd [[
+  let g:fsharp#fsi_keymap = "vim-fsharp"
+]]
