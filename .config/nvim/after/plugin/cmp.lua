@@ -20,7 +20,7 @@ cmp.setup {
     { name = 'emoji', priority = 1 },
   }),
   mapping = cmp.mapping.preset.insert({
-    ['<Esc>'] = cmp.mapping.close(),
+    ['<C-c>'] = cmp.mapping.close(),
     ['<CR>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true
