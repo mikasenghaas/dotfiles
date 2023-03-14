@@ -49,8 +49,14 @@ packer.startup(function(use)
   use 'onsails/lspkind.nvim'
   use 'glepnir/lspsaga.nvim'
 
-  -- astro syntax highlight
+  -- astro
   use 'wuelnerdotexe/vim-astro'
+
+  -- fsharp
+  use 'ionide/Ionide-vim'
+
+  -- tex
+  use 'lervag/vimtex'
 
   -- treesitter (buffer parsing)
   use {
