@@ -165,3 +165,48 @@ By default the popup starts in insert mode, so you can immediately start typing.
 8. `<C-u>`: Scoll up in preview window
 9. `<C-d>`: Scoll down in preview window
 10. `<C-c>`: Close telescope
+
+### Latex in Neovim
+
+LaTeX is a high-quality typesetting system with excellent
+support for scientific writing, especially involving
+mathematicas. In order to integrate Neovim with Latex I
+followed to nice blog posts:
+
+1. [Gilles Castel's Blog](https://castel.dev)
+2. [Elijan Mastnak's Blog](https://www.ejmastnak.com/tutorials/vim-latex/intro/)
+
+The second gives a whole breakdown of the entire setup of
+the system and the former some nice practical advice on how
+to write notes efficiently in Neovim and Latex.
+
+The short summary of the setup is the following:
+
+1. Install `skim` PDF viewer using `brew install skim` and
+   did some minor configuration updates to support live sync
+
+2. Installed the (Neo)vim `vimtex` plugin by adding 
+   `use 'lervag/vimtex'` into the plugin file
+
+3. Added some basic configurations to activate the plugin in
+   the file `after/plugin/vimtex.lua`
+
+Now, upon opening a `.tex` file the plugin should start. It
+supports syntax highlighting, snippet-like commands,
+automatic compilation and live-sync with a PDF viewer. To
+check if the plugin is running, run `:VimtexInfo` in Vim's command
+mode. If this is giving expected output, everything should
+be up and running. Some of the most used commands are:
+
+1. Start continuous compilation (also starts up `skim`):
+   `<localleader>c` / `<localleader>ll` (`:VimtexCompile`)
+
+2. Forward search (jump to current cursor position in PDF):
+   `<localleader>v` (`:VimtexView`)
+
+On top of these two commands there is a series of other
+shortcuts, which are useful. Some of the most important are
+listed here `:help vimtex-default-mappings`
+
+Of course, [`Luasnip`](https://github.com/L3MON4D3/LuaSnip) with [`friendly-snippets`](https://github.com/rafamadriz/friendly-snippets)
+have a ton of useful Latex snippets that I also still have to get used to.
