@@ -33,8 +33,11 @@ nvim_lsp.jsonls.setup { on_attach = on_attach }
 -- python language server
 nvim_lsp.pyright.setup{ on_attach = on_attach }
 
+-- r language server
+nvim_lsp.r_language_server.setup{ on_attach = on_attach }
+
 -- clangd (c language server)
-nvim_lsp.clangd.setup { on_attach = on_attach ,autostart = false }
+nvim_lsp.clangd.setup { on_attach = on_attach, autostart = false }
 
 -- clangd (c language server)
 nvim_lsp.rust_analyzer.setup { on_attach = on_attach }
