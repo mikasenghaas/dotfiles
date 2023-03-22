@@ -58,6 +58,9 @@ packer.startup(function(use)
   -- tex
   use 'lervag/vimtex'
 
+  -- copilot
+  use 'github/copilot.vim'
+
   -- treesitter (buffer parsing)
   use {
     'nvim-treesitter/nvim-treesitter', 
