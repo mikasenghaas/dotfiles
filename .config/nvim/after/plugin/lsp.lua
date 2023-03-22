@@ -65,7 +65,7 @@ require("mason-lspconfig").setup({
 })
 
 -- setup lspsaga (performant ui for lsp features)
-saga.init_lsp_saga()
+-- saga.init_lsp_saga()
 
 -- lsp saga remaps
 local opts = { noremap = true, silent = true }

@@ -10,14 +10,11 @@ require("luasnip.loaders.from_vscode").lazy_load()
 
 -- load custom snippets (configured in lua)
 require("luasnip.loaders.from_lua").load({
-  paths = "~/.config/nvim/luasnippets/"
+   paths = "~/.config/nvim/luasnippets/"
 })
 
 luasnip.config.set_config({
   history = true,
-  updateevents = "TextChanged,TextChangedI",
-  enable_autosnippets = true
+  update_events = {"TextChanged", "TextChangedI"},
+  enable_autosnippets = true,
 })
-
--- keymap
-vim.cmd("imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' ")
