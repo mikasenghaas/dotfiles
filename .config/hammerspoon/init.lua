@@ -12,7 +12,7 @@ M = 10 -- window margin
 
 -- apps
 local alacritty = hs.application.get('Alacritty')
-local min = hs.application.get('Min')
+local browser = hs.application.get('Safari')
 
 -- watchers
 local function hider(appName, eventType)
@@ -261,7 +261,6 @@ function toggleApplication(app, appName)
       app:hide()
     else
       app:activate()
-      pushFull(app:focusedWindow(), M)
     end
   else
     hs.application.launchOrFocus(appName)
@@ -271,7 +270,7 @@ function toggleApplication(app, appName)
 end
 
 hs.hotkey.bind(hyper, 'space', function() toggleApplication(alacritty, "Alacritty") end)
-hs.hotkey.bind('shift', 'space', function() toggleApplication(min, "Min") end)
+hs.hotkey.bind('shift', 'space', function() toggleApplication(browser, "Safari") end)
 
 -- reload configs with HYPER+R
 hs.hotkey.bindSpec({ hyper, 'r' }, hs.reload)
