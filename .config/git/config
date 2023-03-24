@@ -1,11 +1,10 @@
-# .gitconfig 
-#  user-wide git settings
+# git/config 
+#  global git settings
 # by: mika senghaas
 
 [user]
-  name = Mika Senghaas
+  name = mikasenghaas
   email = accounts@jonassenghaas.de
-  username = mikasenghaas
 
 [core]
 	editor = nvim
