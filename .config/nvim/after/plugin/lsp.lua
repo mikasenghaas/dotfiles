@@ -5,9 +5,6 @@
 local status, nvim_lsp = pcall(require, "lspconfig")
 if (not status) then print("lsp config not available") return end
 
-saga = require("lspsaga")
-mason = require("mason")
-
 local on_attach = function(client, bufnr)
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
   vim.keymap.set('n', 'gk', vim.lsp.buf.hover, bufopts)
@@ -44,10 +41,10 @@ nvim_lsp.rust_analyzer.setup { on_attach = on_attach }
 
 -- set diagnostics to update in insert mode
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-    virtual_text = true,
+    virtual_text = false,
     signs = false,
-    underline = true,
-    update_in_insert = true,
+    underline = false,
+    update_in_insert = false,
 })
 
 -- setup mason
@@ -64,15 +61,50 @@ require("mason-lspconfig").setup({
   automatic_installation = true,
 })
 
--- setup lspsaga (performant ui for lsp features)
--- saga.init_lsp_saga()
+-- lspsaga (performant ui for lsp features)
+local status_saga, saga = pcall(require, "lspsaga")
+if (not status_saga) then print("lspsaga config not available") return end
+
+saga.setup({})
 
 -- lsp saga remaps
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
 vim.keymap.set('n', '<C-k>', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
-vim.keymap.set('n', 'ca', '<cmd>Lspsaga code_action<CR>', opts)
 vim.keymap.set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
-vim.keymap.set('i', '<C-h>', '<Cmd>Lspsaga signature_help<CR>', opts)
+vim.keymap.set('n', 'gt', '<Cmd>Lspsaga goto_definition<CR>', opts)
 vim.keymap.set('n', 'gp', '<Cmd>Lspsaga preview_definition<CR>', opts)
 vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
+vim.keymap.set('n', 'ga', '<cmd>Lspsaga code_action<CR>', opts)
+
+-- null-ls (formatting and linting)
+local null_ls_status, null_ls = pcall(require, "null-ls")
+if (not status) then print("null-ls is not available") return end
+
+local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
+
+null_ls.setup({
+  debug = False,
+  sources = {
+    -- formatting
+    formatting.prettier, -- js/ts
+    formatting.black, -- py
+    formatting.latexindent, -- tex
+
+    -- diagnostics
+    diagnostics.ruff, -- py
+    diagnostics.chktex.with({ extra_args = { "-n", "24" } }) -- tex
+  }
+})
+
+function map(mode, lhs, rhs, opts)
+    local options = { noremap = true, silent = true }  
+    if opts then
+        options = vim.tbl_extend("force", options, opts)
+    end
+    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
+
+-- format with leader-f
+map("n", "<leader>f", ":lua vim.lsp.buf.format()<CR>")

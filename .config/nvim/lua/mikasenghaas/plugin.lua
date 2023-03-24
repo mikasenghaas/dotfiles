@@ -48,6 +48,7 @@ packer.startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use 'onsails/lspkind.nvim'
   use 'glepnir/lspsaga.nvim'
+  use 'jose-elias-alvarez/null-ls.nvim'
 
   -- astro
   use 'wuelnerdotexe/vim-astro'
