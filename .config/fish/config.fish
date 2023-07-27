@@ -9,6 +9,7 @@ set fish_greeting ""
 
 alias c clear
 alias g git
+alias aic aicommit
 alias drive 'cd ~/Google\ Drive/My\ Drive'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias whatsmyip="dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com"
@@ -52,6 +53,7 @@ fish_add_path /Library/Java
 
 # python
 pyenv init - | source
+status --is-interactive; and pyenv virtualenv-init - | source
 
 # r
 set -gx LANG en_US.UTF-8
@@ -62,3 +64,6 @@ set -gx LC_ALL en_US.UTF-8
 source ~/.config/fish/plugins/hydro.rc.fish
 source ~/.config/fish/plugins/fzf.rc.fish
 source ~/.config/fish/plugins/vi.rc.fish
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jonas-mika/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/jonas-mika/Downloads/google-cloud-sdk/path.fish.inc'; end
