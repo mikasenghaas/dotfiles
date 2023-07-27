@@ -36,18 +36,7 @@ return {
 
 
   -- environments
-  s({ trig="env", dscr="Creates a New Environment", snippetType="autosnippet" },
-    fmta(
-      [[
-        \begin{<>}
-            <>
-        \end{<>}
-      ]],
-      { i(1), i(0), rep(1) }
-    )
-  ),
-
-  s({ trig = "ali", dscr = "Align Environment", snippetType="autosnippet" },
+  s({ trig = "ali", dscr = "Align Environment" },
     fmta(
       [[
         \begin{align*}
@@ -57,7 +46,7 @@ return {
     { i(1) }
     )
   ),
-  s({ trig = "case", name = "Cases", snippetType="autosnippet" },
+  s({ trig = "case", name = "Cases" },
     fmta(
       [[
         \begin{cases}
@@ -331,6 +320,7 @@ return {
   s({trig="tt", dscr="Expands 'tt' into '\texttt{}'"}, { t("\\texttt{"), i(1), t("}"), }),
   s({trig="bo", dscr="Expands 'tt' into '\textbf{}'"}, { t("\\textbf{"), i(1), t("}"), }),
   s({trig="it", dscr="Expands 'tt' into '\textit}'"}, { t("\\textit{"), i(1), t("}"), }),
+  s({trig="verb", dscr="Expands 'verb' into '\verb}'"}, { t("\\verb{"), i(1), t("}"), }),
 
   -- hyperref
   s({trig="href", dscr="The hyperref package's href{}{} command (for url links)"},

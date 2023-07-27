@@ -39,9 +39,10 @@ vim.opt.title = true
 vim.opt.wrap = false -- no line wrapping
 vim.opt.cmdheight = 1 -- height of command line
 vim.opt.laststatus = 2 -- makes lualine also show in split views
-vim.opt.scrolloff = 5
+vim.opt.scrolloff = 5 -- leave 5 lines space when scrolling
+vim.opt.signcolumn = 'yes' -- always display sign column for diagnostics
 
--- mouse
+-- set mouse
 vim.opt.mouse = 'a'
 
 -- fsharp-ionide

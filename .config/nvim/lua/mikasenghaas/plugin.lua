@@ -38,7 +38,7 @@ packer.startup(function(use)
 
   -- fuzzy finding
   use {
-    'nvim-telescope/telescope.nvim', 
+    'nvim-telescope/telescope.nvim',
      requires = { 'nvim-lua/plenary.nvim' }
   }
 
@@ -64,7 +64,7 @@ packer.startup(function(use)
 
   -- treesitter (buffer parsing)
   use {
-    'nvim-treesitter/nvim-treesitter', 
+    'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
 end)

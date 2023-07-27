@@ -6,6 +6,6 @@ vim.opt.spell = true  -- underline spelling mistakes
 vim.opt.spelllang = 'en_gb' -- use british english
 
 -- correct previous spelling mistakes
-vim.api.nvim_set_keymap('i', '<C-l>', [[<Esc>[s1z=`]a]], {noremap = true})
-vim.api.nvim_set_keymap('n', '<C-l>', [[[s1z=`]]], {noremap = true})
+-- vim.api.nvim_set_keymap('i', '<C-l>', [[<Esc>[s1z=`]a]], {noremap = true})
+-- vim.api.nvim_set_keymap('n', '<C-l>', [[[s1z=`]]], {noremap = true})
 

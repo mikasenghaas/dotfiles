@@ -6,7 +6,7 @@ local status, tn = pcall(require, 'tokyonight')
 if (not status) then return end
 
 tn.setup({
-  style = "storm",
+  style = "night",
   transparent = true,
   terminal_colors = false,
   styles = {
@@ -14,9 +14,9 @@ tn.setup({
     keywords = { italic = false },
     functions = {},
     variables = {},
-    sidebars = "dark", 
+    sidebars = "dark",
     floats = "dark",
   },
 })
 
-vim.cmd('colorscheme tokyonight-moon')
+vim.cmd[[colorscheme tokyonight]]

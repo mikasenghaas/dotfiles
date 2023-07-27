@@ -18,7 +18,9 @@ treesitter.setup {
     "css",
     "html",
     "lua",
-    "make"
+    "make",
+    "markdown",
+    "markdown_inline"
   },
 
   auto_install = true,

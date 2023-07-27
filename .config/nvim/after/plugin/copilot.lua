@@ -1,4 +1,4 @@
--- copilo.lua
+-- copilot.lua
 --  configs for github copilot
 -- by: Mika Senghaas
 
