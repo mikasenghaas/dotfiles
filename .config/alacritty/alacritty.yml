@@ -2,7 +2,8 @@
 
 # colorscheme 
 import:
-  - "~/.config/alacritty/colors/tokyo-night.yml"
+  - "~/.config/alacritty/colors/ayu_dark.yml"
+
 
 # window settings
 window:
