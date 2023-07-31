@@ -19,26 +19,20 @@ tap 'homebrew/services'
 # browser
 cask 'brave-browser'
 cask 'google-chrome'
-cask 'sizzy'
-cask 'min'
+cask 'arc'
 
 # socials
 cask 'whatsapp'
 cask 'discord'
 cask 'slack'
-cask 'dropbox'
 cask 'zoom'
 cask 'microsoft-teams'
 
-# terminal emulator
+# terminal
 cask 'iterm2'
 cask 'alacritty'
 
 # editors
-cask 'macvim'
-cask 'atom'
-cask 'sublime-text'
-cask 'macdown'
 cask 'visual-studio-code'
 cask 'rstudio'
 cask 'tableplus'
@@ -49,14 +43,14 @@ cask 'dotnet-sdk'
 # misc
 cask 'spotify'
 cask 'notion'
-cask 'alfred'
+cask 'obsidian'
+cask 'raycast'
 cask 'bartender'
-cask 'hammerspoon'
 cask 'karabiner-elements'
-cask 'todoist'
 cask '1password'
-cask 'zotero'
 brew '1password-cli'
+cask 'google-drive'
+cask 'zotero'
 
 
 ############################
@@ -83,6 +77,7 @@ brew 'bat'
 brew 'less'
 brew 'most'
 brew 'curl'
+brew 'httpstat'
 brew 'wget'
 brew 'htop'
 brew 'tldr'
