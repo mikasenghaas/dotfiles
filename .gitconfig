@@ -4,7 +4,7 @@
 
 [user]
   name = Mika Senghaas
-  email = accounts@jonassenghaas.de
+  email = mail@mikasenghaas.de
   username = mikasenghaas
 
 [core]
@@ -21,6 +21,7 @@
   ca = commit -a
   ps = push
   pl = pull
+  f = fetch
   st = status
   b = branch
   ba = branch -a
