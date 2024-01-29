@@ -1,6 +1,2 @@
--- init.lua
---  by: mika senghaas
-
-require('mikasenghaas.base')
-require('mikasenghaas.maps')
-require('mikasenghaas.plugin')
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
