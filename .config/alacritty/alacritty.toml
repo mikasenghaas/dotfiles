@@ -1,0 +1,315 @@
+import = ["/Users/jonas-mika/.config/alacritty/colors/ayu_dark.toml"]
+live_config_reload = true
+working_directory = "None"
+
+[font]
+size = 24.0
+
+[font.bold]
+family = "Hack Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "Hack Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "Hack Nerd Font Mono"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Command"
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["-nb", "io.alacritty"]
+program = "open"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Plus"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001\""
+key = "D"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001%"
+key = "D"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0001h"
+key = "H"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001j"
+key = "J"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001k"
+key = "K"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001l"
+key = "L"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001c"
+key = "T"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001x"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001p"
+key = "J"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0001n"
+key = "K"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0001f"
+key = "F"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001o"
+key = "O"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001i"
+key = "I"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001L"
+key = "L"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0001z"
+key = "P"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001H"
+key = "Left"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001J"
+key = "Down"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001K"
+key = "Up"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001L"
+key = "Right"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001"
+key = "A"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0002"
+key = "B"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0003"
+key = "C"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0004"
+key = "D"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0005"
+key = "E"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0006"
+key = "F"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0007"
+key = "G"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\b"
+key = "H"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\t"
+key = "I"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = """
+
+"""
+key = "J"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u000B"
+key = "K"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\f"
+key = "L"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\r"
+key = "M"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u000E"
+key = "N"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u000F"
+key = "O"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0010"
+key = "P"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0011"
+key = "Q"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0012"
+key = "R"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0013"
+key = "S"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0014"
+key = "T"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0015"
+key = "U"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0016"
+key = "V"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0017"
+key = "W"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0018"
+key = "X"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0019"
+key = "Y"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001A"
+key = "Z"
+mods = "Control"
+
+[scrolling]
+history = 2000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[shell]
+args = ["--login"]
+program = "/opt/homebrew/bin/fish"
+
+[window]
+decorations = "none"
+dynamic_padding = false
+opacity = 0.9
+startup_mode = "Windowed"
+title = "Alacritty"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 10
+y = 10
