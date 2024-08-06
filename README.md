@@ -7,17 +7,16 @@ Feel free to take inspiration.
 
 ## :hammer: Toolstack 
 
-This is my current toolstack with all configurations as of 11/2022:
+This is my current toolstack with all configurations as of 08/2024:
 
-- [**alacritty**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/alacritty) as my primary **terminal**
-- [**fish**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/fish) as my primary **shell**
-- [**nvim**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/nvim) as my primary **text editor**
-- [**vim**](https://github.com/mikasenghaas/dotfiles/tree/main/.vim) for a minimal vim setup (used for Vim emulations and on VMs)
-- [**tmux**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/tmux) for managing terminal sessions
-- [**brew**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/brew) for macOS package management
-- [**hammerspoon**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/hammerspoon) for macOS customisation
-- [**karabiner**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/karabiner) for custom key-bindings
-- [**commitizen**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/commitizen) for standardised git commit messages
+- [**Alacritty**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/alacritty) as my primary **terminal**
+- [**Tmux**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/tmux) for **multiplexing**
+- [**Fish**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/fish) as my primary **shell**
+- [**Cursor**](https://cursor.ai) as my primary **editor**
+- [**Neovim**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/nvim) as my secondary **editor**
+- [**Vim**](https://github.com/mikasenghaas/dotfiles/tree/main/.vim) for a minimal vim setup (used for Vim emulations and on VMs)
+- [**Homebrew**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/brew) for macOS package management
+- [**Karabiner**](https://github.com/mikasenghaas/dotfiles/tree/main/.config/karabiner) for custom key-bindings
 
 ## :battery: Install
 
@@ -37,7 +36,7 @@ Then, clone this repository in your home directory (`/Users/<your-username>`) by
 git clone --bare https://github.com/mikasenghaas/dotfiles $HOME/.dotfiles
 ```
 
-Checkout the contens of the bare repo by running `config checkout`. This might lead to an error, if the contents of the git repo are overwriting files that already exist on your system. 
+Checkout the contents of the bare repo by running `config checkout`. This might lead to an error, if the contents of the git repo are overwriting files that already exist on your system. 
 Try this command to move all conflicting files into a backup folder:
 
 ```bash

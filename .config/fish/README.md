@@ -27,7 +27,6 @@ This is the list of all the plugins that I am using (inspired by this [plugin cu
 1. [hydro](https://github.com/jorgebucaran/hydro) for a ultra-minmal prompt
 2. [z](https://github.com/jethrokuan/z) for jumping directories quickly
 3. [fzf](https://github.com/PatrickF1/fzf.fish) for fuzzy finding
-4. [fish-exa](https://github.com/gazorby/fish-exa) for exa keybindings in fish
 
 To install all plugins run:
 
@@ -35,5 +34,4 @@ To install all plugins run:
 fisher install jorgebucaran/hydro
 fisher install jethrokuan/z
 fisher install PatrickF1/fzf.fish
-fisher install gazorby/fish-exa
 ```
