@@ -13,3 +13,7 @@ keymap.set("", "<right>", "<nop>", opts)
 
 -- Select all
 keymap.set("n", "<leader>a", "gg<S-v>G", opts)
+
+-- Splits
+keymap.set("n", "ss", ":split<CR>", opts)
+keymap.set("n", "sv", ":vsplit<CR>", opts)

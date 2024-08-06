@@ -1,6 +1,6 @@
 return {
   -- Good colorschemes
-  { "rose-pine/neovim", name = "rose-pine" },
+  { "rose-pine/neovim", name = "rose-pine", lazy = true },
   {
     "folke/tokyonight.nvim",
     opts = {
@@ -11,8 +11,6 @@ return {
       },
     },
   },
-  { "ellisonleao/gruvbox.nvim" },
-  { "catppuccin/catppuccin" },
 
   -- Configure LazyVim to load colorscheme
   {

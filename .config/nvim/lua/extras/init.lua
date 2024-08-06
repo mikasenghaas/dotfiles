@@ -1,5 +1,5 @@
 return {
-  -- automatic language support
+  -- lsps
   { import = "lazyvim.plugins.extras.lang.typescript" },
   { import = "lazyvim.plugins.extras.lang.tailwind" },
   { import = "lazyvim.plugins.extras.lang.python" },
@@ -8,4 +8,7 @@ return {
   { import = "lazyvim.plugins.extras.lang.markdown" },
   -- copilot
   { import = "lazyvim.plugins.extras.coding.copilot" },
+  -- formatter
+  { import = "lazyvim.plugins.extras.formatting.prettier" },
+  { import = "lazyvim.plugins.extras.formatting.black" },
 }
