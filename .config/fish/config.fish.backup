@@ -9,19 +9,21 @@ set fish_greeting ""
 
 alias c clear
 alias g git
-alias n nvim
-alias t tmux
-alias ll="lsd -l"
-alias lla="lsd -la"
+alias aic aicommit
+alias drive 'cd ~/Google\ Drive/My\ Drive'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias whatsmyip="dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com"
+if type -q exa
+  alias ll "exa -l -g --icons"
+  alias lla "ll -a"
+end
 
 # vim-mode
 # --------
 
 function fish_user_key_bindings
-    fish_default_key_bindings -M insert
-    fish_vi_key_bindings --no-erase insert
+  fish_default_key_bindings -M insert
+  fish_vi_key_bindings --no-erase insert
 end
 
 # paths
@@ -29,7 +31,6 @@ end
 
 # brew
 fish_add_path /opt/homebrew/bin
-fish_add_path /opt/homebrew/sbin
 fish_add_path /opt/homebrew/opt/openjdk/bin
 
 # editor
@@ -61,13 +62,5 @@ set -gx LC_ALL en_US.UTF-8
 
 # plugins configs
 source ~/.config/fish/plugins/hydro.rc.fish
+source ~/.config/fish/plugins/fzf.rc.fish
 source ~/.config/fish/plugins/vi.rc.fish
-
-# fzf
-# ---
-eval "$(fzf --fish)"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jonas-mika/Downloads/google-cloud-sdk/path.fish.inc' ]
-    . '/Users/jonas-mika/Downloads/google-cloud-sdk/path.fish.inc'
-end
