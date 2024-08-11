@@ -23,6 +23,8 @@ brew "lazygit"
 brew "lsd"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Platform built on V8 to build network applications
+brew "node"
 # Object-relational database system
 brew "postgresql@14"
 # Python version management
@@ -39,6 +41,8 @@ brew "tmux"
 brew "tree"
 # Vi 'workalike' with many additional features
 brew "vim"
+# JavaScript package manager
+brew "yarn"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # GPU-accelerated terminal emulator
