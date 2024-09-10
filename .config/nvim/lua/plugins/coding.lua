@@ -6,6 +6,19 @@ return {
     end,
   },
   {
+    "zbirenbaum/copilot.lua",
+    config = function()
+      require("copilot").setup({
+        filetypes = {
+          ["*"] = true,
+          -- Disable Copilot for text-based filetypes
+          ["markdown"] = false,
+          ["tex"] = false,
+        },
+      })
+    end,
+  },
+  {
     "hrsh7th/nvim-cmp",
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
