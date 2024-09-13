@@ -9,8 +9,23 @@ return {
 
       -- change build directory
       vim.g.vimtex_compiler_latexmk = {
-        out_dir = "build",
+        out_dir = ".build",
       }
+
+      -- link pdf after successful compilation
+      local function link_pdf()
+        print("linking")
+        local tex_file = vim.fn.expand("%:p")
+        local pdf_file = tex_file:gsub("%.tex$", ".pdf")
+        local build_pdf = vim.g.vimtex_compiler_latexmk.out_dir .. "/" .. vim.fn.fnamemodify(pdf_file, ":t")
+
+        vim.fn.system("ln -s" .. ' "' .. build_pdf .. '" "' .. pdf_file .. '"')
+      end
+
+      vim.api.nvim_create_autocmd("User", {
+        pattern = "VimtexEventCompileSuccess",
+        callback = link_pdf,
+      })
     end,
   },
   {
