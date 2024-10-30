@@ -7,9 +7,15 @@ Before proceeding, download `brew` using this command:
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-*Link modified: 18/08/22*
 
-To install my personal selection of casks, formulas, fonts and more run the following command.
+To dump the current configuration run:
+
+```bash
+brew bundle dump --describe --brews --casks --taps --file ~/.config/brew/Brewfile
 ```
+
+To install the current configuration run:
+
+```bash
 brew bundle --file=~/.config/brew/Brewfile
 ```
