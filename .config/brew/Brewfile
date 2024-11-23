@@ -1,10 +1,10 @@
 tap "homebrew/bundle"
-# Command-line interface for SQLite
-brew "sqlite"
 # Perl lib for reading and writing EXIF metadata
 brew "exiftool"
 # Secure hashing function
 brew "libb2"
+# Reliable Internet Stream Transport (RIST)
+brew "librist"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # User-friendly command-line shell for UNIX-like operating systems
@@ -49,6 +49,8 @@ brew "tmux-mem-cpu-load"
 brew "tree"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Internet file retriever
+brew "wget"
 # JavaScript package manager
 brew "yarn"
 # GPU-accelerated terminal emulator
@@ -85,8 +87,8 @@ cask "slack"
 cask "spotify"
 # Music streaming service with high fidelity sound and hi-def video quality
 cask "tidal"
-# Virtualiser for x86 hardware
-cask "virtualbox"
+# Virtual machines UI using QEMU
+cask "utm"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Video communication and virtual meeting platform
