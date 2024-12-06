@@ -4,3 +4,6 @@
 
 -- No conceal
 vim.opt.conceallevel = 0
+
+-- Shorter python startup (:help provider-python for more info)
+vim.g.python3_host_prog = "Users/jonas-mika/.pyenv/versions/neovim/bin/python"
