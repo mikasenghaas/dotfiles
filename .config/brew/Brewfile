@@ -55,8 +55,6 @@ brew "wget"
 brew "yarn"
 # GPU-accelerated terminal emulator
 cask "alacritty"
-# Chromium based browser
-cask "arc"
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
 # Write, edit, and chat about your code with AI
@@ -65,6 +63,8 @@ cask "cursor"
 cask "discord"
 cask "font-fira-code"
 cask "font-hack-nerd-font"
+# Web browser
+cask "google-chrome"
 # Client for the Google Drive storage service
 cask "google-drive"
 # Keyboard customiser
