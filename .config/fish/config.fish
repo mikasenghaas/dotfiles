@@ -70,7 +70,13 @@ source ~/.config/fish/plugins/vi.rc.fish
 # ---
 eval "$(fzf --fish)"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jonas-mika/Downloads/google-cloud-sdk/path.fish.inc' ]
-    . '/Users/jonas-mika/Downloads/google-cloud-sdk/path.fish.inc'
+# Start ssh-agent if not already running
+eval (ssh-agent -c) >/dev/null 2>&1
+
+# List of SSH keys to add
+set SSH_KEYS ~/.ssh/id_rsa ~/.ssh/github-personal >/dev/null 2>&1
+
+# Loop to add each key to ssh-agent if it exists
+for key in $SSH_KEYS
+    ssh-add $key >/dev/null 2>&1
 end
