@@ -31,3 +31,5 @@
 
 [gpg]
 	format = ssh
+[init]
+	defaultBranch = master
