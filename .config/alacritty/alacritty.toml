@@ -1,6 +1,8 @@
-import = ["/Users/jonas-mika/.config/alacritty/colors/rose-pine.toml"]
-live_config_reload = true
 working_directory = "None"
+
+[general]
+  import = ["/Users/jonas-mika/.config/alacritty/colors/rose-pine.toml"]
+  live_config_reload = true
 
 
 [window]
@@ -15,7 +17,7 @@ normal = { family = "Hack Nerd Font Mono" }
 bold = { family = "Hack Nerd Font Mono" }
 italic = { family = "Hack Nerd Font Mono" }
 
-[shell]
+[terminal.shell]
 args = ["--login"]
 program = "/opt/homebrew/bin/fish"
 
