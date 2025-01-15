@@ -7,21 +7,8 @@
 	editor = nvim
 
 [alias]
-  st = status
-  d = diff
-  wd = diff --word-diff
-  a = add
-  c = commit
-  ca = commit -a
-  co = checkout
-  cob = checkout -b
-  ps = push
-  pl = pull
-  b = branch
-  ba = branch -a
-  l = log
-  ll = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
-  llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
+  logpretty = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
+  loggraph = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
 
 [pull]
 	ff = only
