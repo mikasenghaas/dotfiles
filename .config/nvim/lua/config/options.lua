@@ -5,5 +5,10 @@
 -- No conceal
 vim.opt.conceallevel = 0
 
--- Shorter python startup (:help provider-python for more info)
-vim.g.python3_host_prog = "Users/jonas-mika/.pyenv/versions/neovim/bin/python"
+-- No smooth scroll
+vim.opt.smoothscroll = false
+
+-- Disable automatic commenting on newlines
+vim.api.nvim_create_autocmd("BufWinEnter", {
+  command = "set formatoptions-=o",
+})

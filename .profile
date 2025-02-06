@@ -14,12 +14,6 @@ PATH=$PATH:~/.local/bin
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Pyenv
-export pyenv_root="$home/.pyenv"
-command -v pyenv >/dev/null || export path="$pyenv_root/bin:$path"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # SSH
 if ! pgrep -u "$USER" ssh-agent >/dev/null; then
   eval "$(ssh-agent -s)"

@@ -43,10 +43,6 @@ alias java19 "set -x JAVA_HOME (/usr/libexec/java_home -v 19); java -version"
 set -x JAVA_HOME (/usr/libexec/java_home)
 fish_add_path /Library/Java
 
-# Python
-pyenv init - | source
-status --is-interactive; and pyenv virtualenv-init - | source
-
 # FZF
 eval "$(fzf --fish)"
 
@@ -56,3 +52,5 @@ set SSH_KEYS ~/.ssh/id_rsa ~/.ssh/github-personal >/dev/null 2>&1
 for key in $SSH_KEYS
     ssh-add $key >/dev/null 2>&1
 end
+uv generate-shell-completion fish | source
+uvx --generate-shell-completion fish | source
