@@ -20,7 +20,7 @@ if ! pgrep -u "$USER" ssh-agent >/dev/null; then
 fi
 
 # List of SSH keys to add
-SSH_KEYS=("~/.ssh/id_rsa" "~/.ssh/github-personal ~/.ssh/prime")
+SSH_KEYS=("~/.ssh/github ~/.ssh/primeintellect")
 
 # Add each key to ssh-agent
 for key in "${SSH_KEYS[@]}"; do
