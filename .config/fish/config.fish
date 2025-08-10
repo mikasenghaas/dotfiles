@@ -33,7 +33,7 @@ end
 # Paths
 fish_add_path /bin ~/bin ~/.local/bin
 fish_add_path /opt/homebrew/bin
-fish_add_path ~/scripting
+fish_add_path ~/scripts
 
 # Java
 set CLASSPATH .
@@ -48,9 +48,10 @@ eval "$(fzf --fish)"
 
 # SSH
 eval (ssh-agent -c) >/dev/null 2>&1
-set SSH_KEYS ~/.ssh/id_rsa ~/.ssh/github-personal >/dev/null 2>&1
+set SSH_KEYS ~/.ssh/primeintellect ~/.ssh/github >/dev/null 2>&1
 for key in $SSH_KEYS
     ssh-add $key >/dev/null 2>&1
 end
 uv generate-shell-completion fish | source
 uvx --generate-shell-completion fish | source
+fish_add_path $HOME/.local/bin
