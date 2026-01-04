@@ -1,6 +1,13 @@
 tap "homebrew/bundle"
+tap "nikitabobko/tap"
+# Statistics utility to count lines of code
+brew "cloc"
+# .NET Core
+brew "dotnet"
 # Perl lib for reading and writing EXIF metadata
 brew "exiftool"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Secure hashing function
 brew "libb2"
 # Reliable Internet Stream Transport (RIST)
@@ -17,28 +24,42 @@ brew "gh"
 brew "git"
 # Git extension for versioning large files
 brew "git-lfs"
+# Command-driven, interactive function plotting
+brew "gnuplot"
+# Improved top (interactive process viewer)
+brew "htop"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
+# Tool to measure maximum TCP and UDP bandwidth
+brew "iperf"
+# Update of iperf: measures TCP, UDP, and SCTP bandwidth
+brew "iperf3"
 # Simple terminal UI for git commands
 brew "lazygit"
 # Clone of ls with colorful output, file type icons, and more
 brew "lsd"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
-# Object-relational database system
-brew "postgresql@14"
-# Python version management
-brew "pyenv"
-# Pyenv plugin to manage virtualenv
-brew "pyenv-virtualenv"
-# Software environment for statistical computing
-brew "r"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# AI coding agent, built for the terminal
+brew "opencode"
+# Efficient rsh-like utility, for using hosts in parallel
+brew "pdsh"
+# Object-relational database system
+brew "postgresql@14"
+# Software environment for statistical computing
+brew "r"
 # Safe, concurrent, practical language
 brew "rust"
+# Sparklines for the shell
+brew "spark"
+# Command-line interface for https://speedtest.net bandwidth tests
+brew "speedtest-cli"
+# User interface to the TELNET protocol
+brew "telnet"
 # Simplified and community-driven man pages
 brew "tldr"
 # Terminal multiplexer
@@ -47,48 +68,61 @@ brew "tmux"
 brew "tmux-mem-cpu-load"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
 # Internet file retriever
 brew "wget"
 # JavaScript package manager
 brew "yarn"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Command-line interface for 1Password
+cask "1password-cli"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "aerospace"
 # GPU-accelerated terminal emulator
 cask "alacritty"
+# Web browser focusing on privacy
+cask "brave-browser"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 # Write, edit, and chat about your code with AI
 cask "cursor"
 # Voice and text chat software
 cask "discord"
+cask "font-arial"
 cask "font-fira-code"
 cask "font-hack-nerd-font"
 # Web browser
 cask "google-chrome"
-# Client for the Google Drive storage service
-cask "google-drive"
 # Keyboard customiser
 cask "karabiner-elements"
+# App to manage software development and track bugs
+cask "linear-linear"
 # Full TeX Live distribution without GUI applications
 cask "mactex-no-gui"
-# Meet, chat, call, and collaborate in just one place
-cask "microsoft-teams"
 # VPN client for secure internet access and private browsing
 cask "nordvpn"
+# App to write, plan, collaborate, and get organised
+cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Collaboration platform for API development
+cask "postman"
 # Control your tools with a few keystrokes
 cask "raycast"
-# PDF reader and note-taking application
-cask "skim"
 # Team communication and collaboration software
 cask "slack"
-# Music streaming service
-cask "spotify"
-# Music streaming service with high fidelity sound and hi-def video quality
-cask "tidal"
-# Virtual machines UI using QEMU
-cask "utm"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Video communication and virtual meeting platform
