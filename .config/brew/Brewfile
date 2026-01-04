@@ -38,6 +38,8 @@ brew "iperf3"
 brew "lazygit"
 # Clone of ls with colorful output, file type icons, and more
 brew "lsd"
+# Remote terminal application
+brew "mosh"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Open-source, cross-platform JavaScript runtime environment
