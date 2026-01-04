@@ -1,7 +1,7 @@
 [user]
   name = Mika Senghaas
   email = mail@mikasenghaas.de
-	signingkey = ~/.ssh/github
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICDLUEMlXSTYHZZE8QLB/6RH5qkUtwP7mw8VpvvMs8GJ
 
 [core]
 	editor = vim
@@ -18,3 +18,5 @@
 
 [gpg]
 	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
