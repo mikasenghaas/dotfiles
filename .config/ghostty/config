@@ -1,0 +1,14 @@
+# font
+font-family = Hack Nerd Font Mono
+font-size = 20
+
+# window
+window-padding-x = 10
+window-padding-y = 10
+background-opacity = 0.97
+
+# shell
+command = /opt/homebrew/bin/fish --login
+
+# gheme
+theme = TokyoNight
