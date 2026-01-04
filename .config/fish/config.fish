@@ -28,6 +28,10 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias python='uvx --with numpy,torch,pandas,datasets,transformers python'
 alias ipython='uvx --with numpy,torch,pandas,datasets,transformers ipython'
 
+# Editor
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+
 # Vim mode
 function fish_user_key_bindings
     fish_default_key_bindings -M insert
