@@ -12,14 +12,16 @@ abbr -a n nvim
 abbr -a gst "git status"
 abbr -a gd "git diff"
 abbr -a ga "git add"
+abbr -a gaa "git add ."
 abbr -a gc "git commit"
+abbr -a gcm 'git commit -m '
 abbr -a gpl "git pull"
 abbr -a gps "git push"
 abbr -a gb "git branch"
 abbr -a gco "git checkout"
 abbr -a gl "git log"
-abbr -a glp "git prettylog"
-abbr -a glg "git graphlog"
+abbr -a glp "git logpretty"
+abbr -a glg "git loggraph"
 
 # Aliases
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
@@ -54,6 +56,5 @@ set SSH_KEYS ~/.ssh/primeintellect ~/.ssh/github >/dev/null 2>&1
 for key in $SSH_KEYS
     ssh-add $key >/dev/null 2>&1
 end
-uv generate-shell-completion fish | source
-uvx --generate-shell-completion fish | source
 fish_add_path $HOME/.local/bin
+source /Users/jonas-mika/.op/plugins.sh
