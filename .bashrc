@@ -1,7 +1,7 @@
 # ~/.bashrc
 if [ -r ~/.profile ]; then . ~/.profile; fi
 
-# Editor
+# editor
 export EDITOR=vim
 export VISUAL=vim
 
