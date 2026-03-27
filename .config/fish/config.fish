@@ -24,7 +24,6 @@ abbr -a glp "git logpretty"
 abbr -a glg "git loggraph"
 
 # Aliases
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias python='uvx --with numpy,torch,pandas,datasets,transformers python'
 alias ipython='uvx --with numpy,torch,pandas,datasets,transformers ipython'
 
