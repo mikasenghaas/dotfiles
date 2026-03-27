@@ -1,12 +1,12 @@
 # ~/.config/fish/config.fish
 
-# Disable fish greeting 
+# disable fish greeting
 set fish_greeting ""
 
-# Color theme
+# color theme
 fish_config theme choose "Just a Touch"
 
-# Abbreviations
+# abbreviations
 abbr -a c clear
 abbr -a n nvim
 abbr -a gst "git status"
@@ -23,30 +23,30 @@ abbr -a gl "git log"
 abbr -a glp "git logpretty"
 abbr -a glg "git loggraph"
 
-# Aliases
+# aliases
 alias python='uvx --with numpy,torch,pandas,datasets,transformers python'
 alias ipython='uvx --with numpy,torch,pandas,datasets,transformers ipython'
 
-# Editor
+# editor
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 
-# Vim mode
+# vim mode
 function fish_user_key_bindings
     fish_default_key_bindings -M insert
     fish_vi_key_bindings --no-erase insert
 end
 
-# Paths
+# paths
 fish_add_path /bin ~/.local/bin
 fish_add_path /opt/homebrew/bin
 fish_add_path ~/dev/scripts
 fish_add_path ~/.bun/bin
 
-# FZF
+# fzf
 eval "$(fzf --fish)"
 
-# SSH
+# ssh
 eval (ssh-agent -c) >/dev/null 2>&1
 set SSH_KEYS ~/.ssh/primeintellect ~/.ssh/github >/dev/null 2>&1
 for key in $SSH_KEYS
