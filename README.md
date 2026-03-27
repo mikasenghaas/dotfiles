@@ -15,9 +15,12 @@ Configuration files for my development environment, managed with [GNU Stow](http
 
 ## Install
 
+Requires SSH keys to be set up first (for git clone and commit signing via 1Password).
+
 ```bash
-# Clone
+# Clone (use HTTPS if SSH keys aren't set up yet)
 git clone git@github.com:mikasenghaas/dotfiles.git ~/dev/dotfiles
+# git clone https://github.com/mikasenghaas/dotfiles.git ~/dev/dotfiles
 
 # Install brew + packages
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
