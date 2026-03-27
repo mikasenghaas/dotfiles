@@ -14,7 +14,7 @@ abbr -a gd "git diff"
 abbr -a ga "git add"
 abbr -a gaa "git add ."
 abbr -a gc "git commit"
-abbr -a gcm 'git commit -m '
+abbr -a gcm 'git commit -m'
 abbr -a gpl "git pull"
 abbr -a gps "git push"
 abbr -a gb "git branch"
@@ -39,9 +39,10 @@ function fish_user_key_bindings
 end
 
 # Paths
-fish_add_path /bin ~/bin ~/.local/bin
+fish_add_path /bin ~/.local/bin
 fish_add_path /opt/homebrew/bin
-fish_add_path ~/scripts
+fish_add_path ~/dev/scripts
+fish_add_path ~/.bun/bin
 
 # Java
 set CLASSPATH .

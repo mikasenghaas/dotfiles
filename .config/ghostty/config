@@ -10,5 +10,14 @@ background-opacity = 0.97
 # shell
 command = /opt/homebrew/bin/fish --login
 
-# gheme
+# theme
 theme = TokyoNight
+
+# split navigation (hjkl)
+keybind = cmd+shift+h=goto_split:left
+keybind = cmd+shift+j=goto_split:down
+keybind = cmd+shift+k=goto_split:up
+keybind = cmd+shift+l=goto_split:right
+
+# toggle maximize pane
+keybind = cmd+shift+enter=toggle_split_zoom

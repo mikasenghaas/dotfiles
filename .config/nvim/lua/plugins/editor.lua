@@ -40,6 +40,35 @@ return {
     },
   },
   {
+    "nvim-telescope/telescope-frecency.nvim",
+    dependencies = { "telescope.nvim" },
+    keys = {
+      {
+        "<leader>ff",
+        function()
+          require("telescope").extensions.frecency.frecency({
+            workspace = "CWD",
+            path_display = { "filename_first" },
+          })
+        end,
+        desc = "Find Files (Frecency)",
+      },
+      {
+        "<leader><space>",
+        function()
+          require("telescope").extensions.frecency.frecency({
+            workspace = "CWD",
+            path_display = { "filename_first" },
+          })
+        end,
+        desc = "Find Files (Frecency)",
+      },
+    },
+    config = function()
+      require("telescope").load_extension("frecency")
+    end,
+  },
+  {
     "telescope.nvim",
     dependencies = {
       {
@@ -136,6 +165,7 @@ return {
         layout_strategy = "horizontal",
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
+        path_display = { "filename_first" },
         winblend = 0,
         mappings = {
           n = {},
