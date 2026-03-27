@@ -43,14 +43,6 @@ fish_add_path /opt/homebrew/bin
 fish_add_path ~/dev/scripts
 fish_add_path ~/.bun/bin
 
-# Java
-set CLASSPATH .
-alias java8 "set -x JAVA_HOME (/usr/libexec/java_home -v 1.8.0); java -version"
-alias java17 "set -x JAVA_HOME (/usr/libexec/java_home -v 17); java -version"
-alias java19 "set -x JAVA_HOME (/usr/libexec/java_home -v 19); java -version"
-set -x JAVA_HOME (/usr/libexec/java_home)
-fish_add_path /Library/Java
-
 # FZF
 eval "$(fzf --fish)"
 
@@ -61,4 +53,4 @@ for key in $SSH_KEYS
     ssh-add $key >/dev/null 2>&1
 end
 fish_add_path $HOME/.local/bin
-source /Users/jonas-mika/.op/plugins.sh
+test -f ~/.op/plugins.sh; and source ~/.op/plugins.sh
