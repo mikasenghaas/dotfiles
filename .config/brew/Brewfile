@@ -12,7 +12,7 @@ brew "fd"
 brew "libb2"
 # Reliable Internet Stream Transport (RIST)
 brew "librist"
-# Play, record, convert, and stream audio and video
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
@@ -28,7 +28,7 @@ brew "git-lfs"
 brew "gnuplot"
 # Improved top (interactive process viewer)
 brew "htop"
-# Tools and libraries to manipulate images in many formats
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # Tool to measure maximum TCP and UDP bandwidth
 brew "iperf"
@@ -60,6 +60,8 @@ brew "rust"
 brew "spark"
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
 # User interface to the TELNET protocol
 brew "telnet"
 # Simplified and community-driven man pages
@@ -84,8 +86,6 @@ brew "yarn"
 cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
-# AeroSpace is an i3-like tiling window manager for macOS
-cask "aerospace"
 # GPU-accelerated terminal emulator
 cask "alacritty"
 # Web browser focusing on privacy
@@ -105,6 +105,8 @@ cask "discord"
 cask "font-arial"
 cask "font-fira-code"
 cask "font-hack-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Web browser
 cask "google-chrome"
 # Keyboard customiser
@@ -115,8 +117,6 @@ cask "linear-linear"
 cask "mactex-no-gui"
 # VPN client for secure internet access and private browsing
 cask "nordvpn"
-# App to write, plan, collaborate, and get organised
-cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Collaboration platform for API development
