@@ -27,6 +27,10 @@ abbr -a glg "git loggraph"
 alias python='uvx --with numpy,torch,pandas,datasets,transformers python'
 alias ipython='uvx --with numpy,torch,pandas,datasets,transformers ipython'
 
+function claude
+    GITHUB_TOKEN=(op read "op://Private/GitHub Personal Access Token/token") command claude $argv
+end
+
 # editor
 set -gx EDITOR nvim
 set -gx VISUAL nvim

@@ -19,3 +19,8 @@ SSH_KEYS=("~/.ssh/github ~/.ssh/primeintellect")
 for key in "${SSH_KEYS[@]}"; do
   [ -f "$key" ] && ssh-add "$key"
 done
+
+# 1password cli plugins (skip in claude code sessions)
+if [ -z "$CLAUDECODE" ] && [ -f ~/.op/plugins.sh ]; then
+  source ~/.op/plugins.sh
+fi

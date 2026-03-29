@@ -6,7 +6,6 @@ export EDITOR=vim
 export VISUAL=vim
 
 eval "$(starship init zsh)"
-source /Users/jonas-mika/.op/plugins.sh
 
 # bun completions
 [ -s "/Users/jonas-mika/.bun/_bun" ] && source "/Users/jonas-mika/.bun/_bun"
