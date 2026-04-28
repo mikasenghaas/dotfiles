@@ -27,9 +27,6 @@ abbr -a glg "git loggraph"
 alias python='uvx --with numpy,torch,pandas,datasets,transformers python'
 alias ipython='uvx --with numpy,torch,pandas,datasets,transformers ipython'
 
-function claude
-    GITHUB_TOKEN=(op read "op://Private/GitHub Personal Access Token/token") command claude $argv
-end
 
 # editor
 set -gx EDITOR nvim
@@ -57,4 +54,3 @@ for key in $SSH_KEYS
     ssh-add $key >/dev/null 2>&1
 end
 fish_add_path $HOME/.local/bin
-test -f ~/.op/plugins.sh; and source ~/.op/plugins.sh
