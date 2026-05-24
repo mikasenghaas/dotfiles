@@ -1,0 +1,7 @@
+.config/fish/fish_variables
+.config/fish/conf.d/fish_frozen_*.fish
+.config/github-copilot/
+.config/opencode/
+.config/pi/
+.config/raycast/
+.DS_Store

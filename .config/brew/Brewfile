@@ -1,133 +1,38 @@
-tap "homebrew/bundle"
-tap "nikitabobko/tap"
-# Statistics utility to count lines of code
-brew "cloc"
-# .NET Core
-brew "dotnet"
-# Perl lib for reading and writing EXIF metadata
-brew "exiftool"
-# Simple, fast and user-friendly alternative to find
-brew "fd"
-# Secure hashing function
-brew "libb2"
-# Reliable Internet Stream Transport (RIST)
-brew "librist"
-# Play, record, convert, and stream select audio and video codecs
-brew "ffmpeg"
-# User-friendly command-line shell for UNIX-like operating systems
-brew "fish"
-# Command-line fuzzy finder written in Go
-brew "fzf"
-# GitHub command-line tool
-brew "gh"
-# Distributed revision control system
-brew "git"
-# Git extension for versioning large files
-brew "git-lfs"
-# Command-driven, interactive function plotting
-brew "gnuplot"
-# Improved top (interactive process viewer)
-brew "htop"
-# Tools and libraries to manipulate images in select formats
-brew "imagemagick"
-# Tool to measure maximum TCP and UDP bandwidth
-brew "iperf"
-# Update of iperf: measures TCP, UDP, and SCTP bandwidth
-brew "iperf3"
-# Simple terminal UI for git commands
-brew "lazygit"
-# Clone of ls with colorful output, file type icons, and more
-brew "lsd"
-# Remote terminal application
-brew "mosh"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
-# Open-source, cross-platform JavaScript runtime environment
-brew "node"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
-# AI coding agent, built for the terminal
-brew "opencode"
-# Efficient rsh-like utility, for using hosts in parallel
-brew "pdsh"
-# Object-relational database system
-brew "postgresql@14"
-# Software environment for statistical computing
-brew "r"
-# Safe, concurrent, practical language
-brew "rust"
-# Sparklines for the shell
-brew "spark"
-# Command-line interface for https://speedtest.net bandwidth tests
-brew "speedtest-cli"
-# Organize software neatly under a single directory tree (e.g. /usr/local)
+# Core dev tools
 brew "stow"
-# User interface to the TELNET protocol
-brew "telnet"
-# Simplified and community-driven man pages
-brew "tldr"
-# Terminal multiplexer
+brew "fish"
 brew "tmux"
-# CPU, RAM memory, and load monitor for use with tmux
-brew "tmux-mem-cpu-load"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
-# Extremely fast Python package installer and resolver, written in Rust
-brew "uv"
-# Vi 'workalike' with many additional features
+brew "neovim"
 brew "vim"
-# Executes a program periodically, showing output fullscreen
-brew "watch"
-# Internet file retriever
+brew "git"
+brew "git-lfs"
+brew "gh"
+brew "fzf"
+brew "fd"
+brew "ripgrep"
+brew "lazygit"
+brew "tree"
 brew "wget"
-# JavaScript package manager
-brew "yarn"
-# Password manager that keeps all passwords secure behind one password
+brew "uv"
+brew "node"
+brew "tldr"
+brew "htop"
+brew "iperf"
+brew "opencode"
+brew "starship"
+
+# Apps
 cask "1password"
-# Command-line interface for 1Password
 cask "1password-cli"
-# GPU-accelerated terminal emulator
-cask "alacritty"
-# Web browser focusing on privacy
-cask "brave-browser"
-# OpenAI's official ChatGPT desktop app
-cask "chatgpt"
-# Terminal-based AI coding assistant
-cask "claude-code"
-# Tool to remove unnecessary files and folders from disk
-cask "cleanmymac"
-# OpenAI's coding agent that runs in your terminal
-cask "codex"
-# Write, edit, and chat about your code with AI
-cask "cursor"
-# Voice and text chat software
-cask "discord"
-cask "font-arial"
-cask "font-fira-code"
-cask "font-hack-nerd-font"
-# Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
-# Web browser
-cask "google-chrome"
-# Keyboard customiser
-cask "karabiner-elements"
-# App to manage software development and track bugs
-cask "linear-linear"
-# Full TeX Live distribution without GUI applications
-cask "mactex-no-gui"
-# VPN client for secure internet access and private browsing
-cask "nordvpn"
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
-# Collaboration platform for API development
-cask "postman"
-# Control your tools with a few keystrokes
 cask "raycast"
-# Team communication and collaboration software
+cask "google-chrome"
+cask "brave-browser"
+cask "cursor"
 cask "slack"
-# Native desktop client for WhatsApp
+cask "discord"
 cask "whatsapp"
-# Video communication and virtual meeting platform
-cask "zoom"
-# Collect, organise, cite, and share research sources
-cask "zotero"
+cask "obsidian"
+cask "linear"
+cask "karabiner-elements"
+cask "font-hack-nerd-font"
