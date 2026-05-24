@@ -4,7 +4,6 @@ Configuration files for my development environment, managed with [GNU Stow](http
 
 ## Toolstack
 
-- [**Alacritty**](.config/alacritty) — terminal
 - [**Ghostty**](.config/ghostty) — terminal
 - [**Fish**](.config/fish) — shell
 - [**Tmux**](.config/tmux) — multiplexer
@@ -12,6 +11,7 @@ Configuration files for my development environment, managed with [GNU Stow](http
 - [**Vim**](.vim) — minimal vim setup (VM / vim emulation)
 - [**Homebrew**](.config/brew) — package management
 - [**Git**](.config/git) — version management
+- [**Karabiner**](.config/karabiner) — Caps Lock → Hyper, Hyper+hjkl → arrows
 
 ## Install
 
@@ -29,6 +29,14 @@ brew bundle --file=~/dev/dotfiles/.config/brew/Brewfile
 # Symlink everything into ~
 cd ~/dev/dotfiles
 stow -t ~ .
+```
+
+## macOS defaults
+
+Edit the variables at the top of [`scripts/macos-defaults.sh`](scripts/macos-defaults.sh) (computer name, hostname), then run it to apply machine-naming and keyboard repeat defaults:
+
+```bash
+./scripts/macos-defaults.sh
 ```
 
 ## Usage
