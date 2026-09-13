@@ -1,41 +1,97 @@
-# Core dev tools
-brew "stow"
-brew "fish"
-brew "tmux"
-brew "neovim"
-brew "vim"
-brew "git"
-brew "git-lfs"
-brew "gh"
-brew "fzf"
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
-brew "ripgrep"
-brew "lazygit"
-brew "tree"
-brew "wget"
-brew "uv"
-brew "node"
-brew "tldr"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
+# Improved top (interactive process viewer)
 brew "htop"
+# Tool to measure maximum TCP and UDP bandwidth
 brew "iperf"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# AI coding agent, built for the terminal
 brew "opencode"
+# Cross-shell prompt for astronauts
 brew "starship"
-cask "codex"
-
-# Apps
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Simplified and community-driven man pages
+brew "tldr"
+# Terminal multiplexer
+brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
+# Vi 'workalike' with many additional features
+brew "vim"
+# Internet file retriever
+brew "wget"
+# Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Command-line interface for 1Password
 cask "1password-cli"
-cask "ghostty"
-cask "raycast"
-cask "google-chrome"
+# Web browser focusing on privacy
 cask "brave-browser"
-cask "cursor"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+# Anthropic's official Claude AI desktop app
 cask "claude"
-cask "codex-app"
-cask "slack"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
+# Write, edit, and chat about your code with AI
+cask "cursor"
+# Voice and text chat software
 cask "discord"
-cask "whatsapp"
-cask "obsidian"
-cask "linear"
-cask "karabiner-elements"
 cask "font-hack-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Web browser
+cask "google-chrome"
+# Keyboard customiser
+cask "karabiner-elements"
+# App to manage software development and track bugs
+cask "linear"
+# VPN client for secure internet access and private browsing
+cask "nordvpn"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Team communication and collaboration software
+cask "slack"
+# Native desktop client for WhatsApp
+cask "whatsapp"
+# Video communication and virtual meeting platform
+cask "zoom"
+vscode "anthropic.claude-code"
+vscode "anysphere.cursorpyright"
+vscode "anysphere.remote-containers"
+vscode "anysphere.remote-ssh"
+vscode "charliermarsh.ruff"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "tamasfe.even-better-toml"
+vscode "vscodevim.vim"
+vscode "wholroyd.jinja"
+uv "harbor"
+uv "modal"
+uv "prime"
+npm "prime-agent"
