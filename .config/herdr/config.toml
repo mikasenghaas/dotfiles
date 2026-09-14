@@ -10,7 +10,6 @@ auto_switch = false
 [ui]
 status_indicators = "symbols"
 window_title = "herdr · {workspace}"
-mouse_capture = false
 
 [ui.toast]
 delivery = "herdr"
