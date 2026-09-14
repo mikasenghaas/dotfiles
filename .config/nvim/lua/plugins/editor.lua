@@ -41,7 +41,7 @@ return {
   },
   {
     "nvim-telescope/telescope-frecency.nvim",
-    dependencies = { "telescope.nvim" },
+    dependencies = { "nvim-telescope/telescope.nvim" },
     keys = {
       {
         "<leader>ff",
@@ -69,7 +69,7 @@ return {
     end,
   },
   {
-    "telescope.nvim",
+    "nvim-telescope/telescope.nvim",
     dependencies = {
       {
         "nvim-telescope/telescope-fzf-native.nvim",
