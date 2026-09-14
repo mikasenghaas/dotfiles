@@ -79,6 +79,8 @@ cask "obsidian"
 cask "raycast"
 # Team communication and collaboration software
 cask "slack"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Video communication and virtual meeting platform
