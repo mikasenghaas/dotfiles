@@ -9,6 +9,10 @@ auto_switch = false
 
 [ui]
 status_indicators = "symbols"
+window_title = "herdr · {workspace}"
 
 [ui.toast]
 delivery = "herdr"
+
+[experimental]
+allow_nested = true
