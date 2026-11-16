@@ -8,6 +8,7 @@ name = "tokyo-night"
 auto_switch = false
 
 [ui]
+sidebar_width = 30
 status_indicators = "symbols"
 window_title = "herdr · {workspace}"
 
