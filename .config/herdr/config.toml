@@ -16,3 +16,6 @@ delivery = "herdr"
 
 [experimental]
 allow_nested = true
+
+[keys]
+last_pane = "prefix+;"
