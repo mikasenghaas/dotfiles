@@ -13,16 +13,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   end,
 })
 
--- LaTeX file settings
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "tex" },
-  callback = function()
-    vim.opt_local.wrap = true -- Enable visual line wrapping
-    vim.opt_local.textwidth = 80 -- Set textwidth
-    vim.opt_local.colorcolumn = "80" -- Enable colorcolumn
-  end,
-})
-
 -- Markdown file settings
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "markdown" },

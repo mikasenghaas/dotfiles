@@ -13,19 +13,20 @@ return {
       },
       servers = {
         jsonls = {
-          on_new_config = function(config)
-            -- Remove auto-associated schemas for tasks.json
-            local schemas = config.settings.json.schemas or {}
-            config.settings.json.schemas = vim.tbl_filter(function(schema)
-              return not vim.tbl_contains(schema.fileMatch or {}, "tasks.json")
-            end, schemas)
+          -- SchemaStore's "task.json" schema claims every tasks.json and flags unrelated files.
+          before_init = function(_, config)
+            config.settings.json.schemas = require("schemastore").json.schemas({ ignore = { "task.json" } })
           end,
         },
         basedpyright = {
+          -- Root at the environment, not the nearest pyproject.toml: uv workspace members share the root .venv.
+          root_markers = { ".venv", ".git" },
           before_init = function(_, config)
-            local venv = vim.fn.getcwd() .. "/.venv"
+            local venv = config.root_dir .. "/.venv"
             if vim.fn.isdirectory(venv) == 1 then
-              config.settings.python.pythonPath = venv .. "/bin/python"
+              config.settings.python = vim.tbl_extend("force", config.settings.python or {}, {
+                pythonPath = venv .. "/bin/python",
+              })
             end
           end,
           settings = {
@@ -40,7 +41,6 @@ return {
           },
         },
       },
-      setup = {},
     },
   },
 }
