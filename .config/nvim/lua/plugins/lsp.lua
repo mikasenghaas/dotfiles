@@ -9,7 +9,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       diagnostics = {
-        virtual_text = false,
+        virtual_text = { current_line = true },
       },
       servers = {
         jsonls = {
@@ -21,11 +21,15 @@ return {
         basedpyright = {
           -- Root at the environment, not the nearest pyproject.toml: uv workspace members share the root .venv.
           root_markers = { ".venv", ".git" },
+          -- uv returns the project .venv, else an installed interpreter that satisfies requires-python.
+          -- Without it, basedpyright falls back to the system python and its older language version.
           before_init = function(_, config)
-            local venv = config.root_dir .. "/.venv"
-            if vim.fn.isdirectory(venv) == 1 then
+            local ok, res = pcall(function()
+              return vim.system({ "uv", "python", "find" }, { cwd = config.root_dir, text = true }):wait()
+            end)
+            if ok and res.code == 0 then
               config.settings.python = vim.tbl_extend("force", config.settings.python or {}, {
-                pythonPath = venv .. "/bin/python",
+                pythonPath = vim.trim(res.stdout),
               })
             end
           end,
