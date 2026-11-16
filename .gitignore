@@ -5,3 +5,15 @@
 .config/pi/
 .config/raycast/
 .DS_Store
+.config/1Password/
+.config/gh/
+.config/op/
+.config/uv/
+.config/herdr/*.log
+.config/herdr/*.sock*
+.config/herdr/.plugins.lock
+.config/herdr/release-notes.json
+.config/herdr/session.json
+.config/herdr/session-snapshots/
+.config/karabiner/automatic_backups/
+.vim/.netrwhist

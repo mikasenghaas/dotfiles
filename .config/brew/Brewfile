@@ -79,6 +79,8 @@ cask "nordvpn"
 cask "obsidian"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Instant messaging application focusing on security
+cask "signal"
 # Team communication and collaboration software
 cask "slack"
 # Mesh VPN based on WireGuard
