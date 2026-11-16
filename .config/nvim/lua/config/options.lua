@@ -2,8 +2,12 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
--- Use Copilot ghost text instead of completion menu
-vim.g.ai_cmp = false
+vim.g.lazyvim_picker = "snacks"
+vim.g.lazyvim_explorer = "snacks"
+vim.g.lazyvim_python_lsp = "basedpyright"
+
+-- Monorepos nest a pyproject.toml per package, so an LSP root would scope pickers to one package.
+vim.g.root_spec = { { ".git" }, "lsp", "cwd" }
 
 -- No conceal
 vim.opt.conceallevel = 0
