@@ -19,8 +19,3 @@ vim.opt.smoothscroll = false
 vim.api.nvim_create_autocmd("BufWinEnter", {
   command = "set formatoptions-=o",
 })
-
--- Disable inline diagnostic virtual text
-vim.diagnostic.config({
-  virtual_text = false,
-})
