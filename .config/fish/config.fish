@@ -49,10 +49,4 @@ fish_add_path ~/.bun/bin
 # fzf
 eval "$(fzf --fish)"
 
-# ssh
-eval (ssh-agent -c) >/dev/null 2>&1
-set SSH_KEYS ~/.ssh/primeintellect ~/.ssh/github >/dev/null 2>&1
-for key in $SSH_KEYS
-    ssh-add $key >/dev/null 2>&1
-end
 fish_add_path $HOME/.local/bin
