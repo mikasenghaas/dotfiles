@@ -31,6 +31,21 @@ cd ~/dev/dotfiles
 stow -t ~ .
 ```
 
+## Ubuntu sandbox
+
+Clone this repo into `~/dev/dotfiles`, then run as root:
+
+```bash
+bash ~/dev/dotfiles/scripts/setup-sandbox.sh
+codex login --device-auth
+cd ~/workspace
+tmux new-session -A -s blue
+```
+
+The script installs development tools and Codex, links Fish, tmux, and Neovim,
+and enables Daybreak for new Codex sessions. Daybreak requires approved access.
+It leaves the macOS Git signing configuration unlinked.
+
 ## macOS defaults
 
 Edit the variables at the top of [`scripts/macos-defaults.sh`](scripts/macos-defaults.sh) (computer name, hostname), then run it to apply machine-naming and keyboard repeat defaults:
