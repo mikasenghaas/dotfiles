@@ -47,6 +47,8 @@ fish_add_path ~/dev/scripts
 fish_add_path ~/.bun/bin
 
 # fzf
-eval "$(fzf --fish)"
+if command -q fzf
+    fzf --fish 2>/dev/null | source
+end
 
 fish_add_path $HOME/.local/bin
